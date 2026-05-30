@@ -6,7 +6,8 @@
 
 <title>Iuran Kelompok | POKLAHSAR</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
@@ -19,51 +20,33 @@ font-family:'Segoe UI',sans-serif;
 
 body{
 background:#eef3fa;
-}
-
-/* TOPBAR */
-
-.topbar{
-height:60px;
-background:#4c63d2;
 display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-weight:500;
-gap:30px;
-}
-
-.topbar a{
-color:white;
-text-decoration:none;
-}
-
-/* LAYOUT */
-
-.wrapper{
-display:flex;
-height:calc(100vh - 60px);
 }
 
 /* SIDEBAR */
 
 .sidebar{
-width:260px;
-background:white;
-border-right:1px solid #ddd;
+width:280px;
+height:100vh;
+background:#0b5ed7;
+color:white;
+position:fixed;
 overflow-y:auto;
 }
 
 .logo{
 padding:25px;
 text-align:center;
-background:#0b5ed7;
-color:white;
+border-bottom:1px solid rgba(255,255,255,.2);
 }
 
 .logo h2{
 font-size:24px;
+}
+
+.logo p{
+font-size:13px;
+margin-top:5px;
 }
 
 .menu{
@@ -75,78 +58,126 @@ list-style:none;
 }
 
 .menu li{
-margin-bottom:8px;
+margin-bottom:5px;
 }
 
 .menu a{
 display:block;
 padding:12px 15px;
+color:white;
 text-decoration:none;
-color:#444;
 border-radius:8px;
 transition:.3s;
 }
 
 .menu a:hover{
-background:#eef3fa;
+background:rgba(255,255,255,.15);
 }
 
 .active{
-background:#4c63d2;
-color:white !important;
+background:rgba(255,255,255,.2);
 }
 
 .submenu{
 display:none;
 margin-left:20px;
-margin-top:5px;
 }
 
 .submenu a{
+background:rgba(255,255,255,.08);
+margin-top:4px;
 font-size:14px;
-padding:10px;
 }
 
- /* CONTENT */
+/* MAIN */
+
+.main{
+margin-left:280px;
+width:calc(100% - 280px);
+}
+
+.topbar{
+background:white;
+padding:18px 25px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.topbar h2{
+color:#0b5ed7;
+}
 
 .content{
-flex:1;
 padding:25px;
-overflow-y:auto;
+}
+ .form-card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+max-width:900px;
 }
 
-.page{
-background:#dfe8fb;
-padding:20px;
-border-radius:10px;
-}
-
-.page h1{
-color:#2f3e78;
+.form-card h3{
+color:#0b5ed7;
 margin-bottom:20px;
 }
 
-.form-box{
-background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
+.row{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-bottom:15px;
 }
 
-.form-box iframe{
+input{
 width:100%;
-height:1500px;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+}
+
+.btn{
+padding:12px 20px;
 border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.btn-save{
+background:#0b5ed7;
+color:white;
+}
+
+.btn-reset{
+background:#dc3545;
+color:white;
+}
+
+.message{
+margin-top:15px;
+font-weight:bold;
 }
 
 @media(max-width:768px){
 
-.wrapper{
-flex-direction:column;
-}
-
 .sidebar{
 width:100%;
+height:auto;
+position:relative;
+}
+
+.main{
+margin-left:0;
+width:100%;
+}
+
+.row{
+grid-template-columns:1fr;
+}
+
+body{
+flex-direction:column;
 }
 
 }
@@ -154,137 +185,109 @@ width:100%;
 </style>
 </head>
 <body>
-
-<div class="topbar">
-
-<a href="#"><i class="fas fa-table"></i> Dashboard</a>
-
-<a href="#"><i class="fas fa-project-diagram"></i> Activity Diagram</a>
-
-<a href="#"><i class="fas fa-file"></i> Form</a>
-
-</div>
-
-<div class="wrapper">
-
-<div class="sidebar">
+ <div class="sidebar">
 
 <div class="logo">
 <h2>POKLAHSAR</h2>
+<p>Kelompok Pengolah dan Pemasar Hasil Perikanan</p>
 </div>
 
 <div class="menu">
 
 <ul>
 
-<li><a href="index.html"><i class="fas fa-home"></i> Menu</a></li>
+<li><a href="index.html">🏠 Menu</a></li>
 
-<li><a href="kelompok.html"><i class="fas fa-users"></i> Kelompok</a></li>
+<li><a href="kelompok.html">👥 Kelompok</a></li>
 
 <li>
 
 <a href="#" onclick="toggleBuku();return false;">
-<i class="fas fa-book"></i> Buku
+📚 Buku
 </a>
 
 <div class="submenu" id="submenuBuku">
 
 <a href="dataanggota.html">Data Anggota</a>
-
 <a href="tamukelompok.html">Tamu Kelompok</a>
-
 <a href="kaskelompok.html">Kas Kelompok</a>
-
 <a href="produksikelompok.html">Produksi Kelompok</a>
-
 <a href="notulenrapat.html">Notulen Rapat</a>
-
 <a href="ruk.html">RUK</a>
-
 <a href="rub.html">RUB</a>
-
 <a href="agenda.html">Agenda</a>
 
 </div>
 
 </li>
 
-<li>
-<a href="rencanakegiatan.html">
-<i class="fas fa-calendar"></i>
-Rencana Kegiatan
-</a>
-</li>
+<li><a href="rencanakegiatan.html">📅 Rencana Kegiatan</a></li>
 
-<li>
-<a href="polapoklahsar.html">
-<i class="fas fa-store"></i>
-Pola Pengolahan dan Pemasaran
-</a>
-</li>
+<li><a href="polapoklahsar.html">🏪 Pola Pengolahan dan Pemasaran</a></li>
 
-<li>
-<a href="inventarisbarang.html">
-<i class="fas fa-box"></i>
-Inventaris Barang
-</a>
-</li>
+<li><a href="inventarisbarang.html">📦 Inventaris Barang</a></li>
 
-<li>
-<a href="pertemuankelompok.html">
-<i class="fas fa-users"></i>
-Pertemuan Kelompok
-</a>
-</li>
+<li><a href="pertemuankelompok.html">👥 Pertemuan Kelompok</a></li>
 
-<li>
-<a href="iurankelompok.html" class="active">
-<i class="fas fa-wallet"></i>
-Iuran Kelompok
-</a>
-</li>
+<li><a href="iurankelompok.html" class="active">💰 Iuran Kelompok</a></li>
 
-<li>
-<a href="pinjamananggota.html">
-<i class="fas fa-money-bill-wave"></i>
-Pinjaman Anggota
-</a>
-</li>
+<li><a href="pinjamananggota.html">💵 Pinjaman Anggota</a></li>
 
-<li>
-<a href="kodifikasi.html">
-<i class="fas fa-qrcode"></i>
-Kodifikasi Kelompok
-</a>
-</li>
+<li><a href="kodifikasi.html">🔳 Kodifikasi Kelompok</a></li>
 
-<li>
-<a href="printdokumen.html">
-<i class="fas fa-print"></i>
-Print Dokumen
-</a>
-</li>
+<li><a href="printdokumen.html">🖨️ Print Dokumen</a></li>
 
 </ul>
 
 </div>
 
 </div>
- 
- <div class="content">
 
-<div class="page">
+<div class="main">
 
-<h1>Iuran Kelompok</h1>
-
-<div class="form-box">
-
-<iframe
-src="https://docs.google.com/forms/d/e/1FAIpQLSdsJWxMvU_S8S_Fke6x_XcTDn2SkGCdbNu971YX4PRnxYu-pw/viewform?embedded=true">
-Loading…
-</iframe>
-
+<div class="topbar">
+<h2>Iuran Kelompok</h2>
 </div>
+
+<div class="content">
+
+<div class="form-card">
+
+<h3>Form Input Iuran Kelompok</h3>
+
+<form id="iuranForm">
+
+<div class="row">
+<input type="text" name="kelompok" placeholder="Nama Kelompok" required>
+<input type="text" name="nama" placeholder="Nama Anggota" required>
+</div>
+
+<div class="row">
+<input type="date" name="tanggal_tabungan">
+<input type="number" name="jumlah_tabungan" placeholder="Jumlah Tabungan">
+</div>
+
+<div class="row">
+<input type="date" name="tanggal_iuran">
+<input type="number" name="jumlah_iuran" placeholder="Jumlah Iuran">
+</div>
+
+<div class="row">
+<input type="date" name="tanggal_sukarela">
+<input type="number" name="jumlah_sukarela" placeholder="Jumlah Sukarela">
+</div>
+
+<button type="submit" class="btn btn-save">
+Simpan Data
+</button>
+
+<button type="reset" class="btn btn-reset">
+Reset
+</button>
+
+<div class="message" id="message"></div>
+
+</form>
 
 </div>
 
@@ -306,6 +309,41 @@ submenu.style.display="block";
 }
 
 }
+
+const form =
+document.getElementById("iuranForm");
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+fetch(
+"https://script.google.com/macros/s/AKfycbwWSuilM0-1FC5oN-KY6Q7t_EvfmdBbbvO49ZEIqfbMfAPZQC2NYoxNMex2fvjbGPgtmA/exec",
+{
+method:"POST",
+body:new FormData(form)
+}
+)
+
+.then(response => response.text())
+
+.then(data => {
+
+document.getElementById("message").innerHTML =
+"✅ Data berhasil disimpan";
+
+form.reset();
+
+})
+
+.catch(error => {
+
+document.getElementById("message").innerHTML =
+"❌ Gagal menyimpan data";
+
+});
+
+});
 
 </script>
 
