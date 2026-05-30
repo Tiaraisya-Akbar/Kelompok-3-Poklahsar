@@ -243,9 +243,17 @@ width:100%;
 
 <li>
 
-<a href="#" onclick="toggleBuku(); return false;">
+<a href="#" class="dropdown-btn"
+onclick="toggleBuku(); return false;">
+
+<span>
 <i class="fas fa-book"></i>
  Buku
+</span>
+
+<i id="arrowBuku"
+class="fas fa-chevron-right"></i>
+
 </a>
 
 <div class="submenu" id="submenuBuku">
@@ -339,41 +347,155 @@ width:100%;
 
 <div class="content">
 
+<div class="page-header">
+
+<h2>
+<i class="fas fa-wallet"></i>
+ Iuran Kelompok
+</h2>
+
+<p>
+Pengelolaan data tabungan, iuran wajib, dan iuran sukarela anggota kelompok.
+</p>
+
+</div>
+
+<div class="stats">
+
+<div class="stat-card">
+<i class="fas fa-piggy-bank"></i>
+<h4>Tabungan</h4>
+<p>Rp 0</p>
+</div>
+
+<div class="stat-card">
+<i class="fas fa-money-bill-wave"></i>
+<h4>Iuran</h4>
+<p>Rp 0</p>
+</div>
+
+<div class="stat-card">
+<i class="fas fa-hand-holding-heart"></i>
+<h4>Sukarela</h4>
+<p>Rp 0</p>
+</div>
+
+</div>
+
 <div class="form-card">
 
-<h3>Input Iuran Kelompok</h3>
+<h3>
+<i class="fas fa-edit"></i>
+ Form Input Iuran Kelompok
+</h3>
 
 <form id="iuranForm">
 
 <div class="row">
-<input type="text" name="kelompok" placeholder="nama kelompok" required>
-<input type="text" name="nama" placeholder="nama" required>
+
+<div class="input-group">
+<label>Nama Kelompok</label>
+<input
+type="text"
+name="kelompok"
+placeholder="Masukkan Nama Kelompok"
+required>
+</div>
+
+<div class="input-group">
+<label>Nama</label>
+<input
+type="text"
+name="nama"
+placeholder="Masukkan Nama"
+required>
+</div>
+
 </div>
 
 <div class="row">
-<input type="date" name="tanggal_tabungan">
-<input type="number" name="jumlah_tabungan" placeholder="jumlah tabungan">
+
+<div class="input-group">
+<label>Tanggal Tabungan</label>
+<input
+type="date"
+name="tanggal_tabungan">
+</div>
+
+<div class="input-group">
+<label>Jumlah Tabungan</label>
+<input
+type="number"
+name="jumlah_tabungan"
+placeholder="Rp">
+</div>
+
 </div>
 
 <div class="row">
-<input type="date" name="tanggal_iuran">
-<input type="number" name="jumlah_iuran" placeholder="jumlah iuran">
+
+<div class="input-group">
+<label>Tanggal Iuran</label>
+<input
+type="date"
+name="tanggal_iuran">
+</div>
+
+<div class="input-group">
+<label>Jumlah Iuran</label>
+<input
+type="number"
+name="jumlah_iuran"
+placeholder="Rp">
+</div>
+
 </div>
 
 <div class="row">
-<input type="date" name="tanggal_sukarela">
-<input type="number" name="jumlah_sukarela" placeholder="jumlah sukarela">
+
+<div class="input-group">
+<label>Tanggal Sukarela</label>
+<input
+type="date"
+name="tanggal_sukarela">
 </div>
 
-<button type="submit" class="btn btn-save">
-Simpan Data
+<div class="input-group">
+<label>Jumlah Sukarela</label>
+<input
+type="number"
+name="jumlah_sukarela"
+placeholder="Rp">
+</div>
+
+</div>
+
+<div class="button-group">
+
+<button
+type="submit"
+class="btn btn-save">
+
+<i class="fas fa-save"></i>
+ Simpan Data
+
 </button>
 
-<button type="reset" class="btn btn-reset">
-Reset
+<button
+type="reset"
+class="btn btn-reset">
+
+<i class="fas fa-rotate-left"></i>
+ Reset
+
 </button>
 
-<div class="message" id="message"></div>
+</div>
+
+<div
+class="message"
+id="message">
+</div>
 
 </form>
 
