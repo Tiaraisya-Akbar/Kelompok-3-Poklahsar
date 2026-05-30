@@ -383,7 +383,7 @@ function toggleBuku(){
 const form = document.getElementById("rencanaForm");
 form.addEventListener("submit", function(e){
   e.preventDefault();
-  fetch("https://script.google.com/macros/s/AKfycbyZ2euO2N42j5_twd9uPXvWVpzZJkLVzNrFcfFmZU3wES2gEMIwmybIG0znKPIupiOwAA/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbyAiWPiRFhBoQbYTP9GmfIf5uwlWMqsbMhq1L9GzxldYwDUp6Vox9nI1sG3PlngPveBrA/exec", {
     method:"POST",
     body:new FormData(form)
   })
