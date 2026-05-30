@@ -372,62 +372,127 @@ grid-template-columns:1fr;
 <div class="content">
 
 <div class="page-header">
-<h2>Kodifikasi Kelompok</h2>
-<p>Pengelolaan kode referensi dan klasifikasi data kelompok pengolah dan pemasar hasil perikanan.</p>
+<h2>Data Kelompok</h2>
+<p>Input dan pengelolaan identitas kelompok pengolah dan pemasar hasil perikanan.</p>
 </div>
 
 <div class="form-card">
 
 <h3>
-<i class="fas fa-qrcode"></i>
- Tambah Kodifikasi
+<i class="fas fa-users"></i>
+ Tambah Kelompok
 </h3>
 
-<form id="kodifikasiForm">
+<form id="kelompokForm">
 
 <div class="row">
 
 <div class="input-group">
-<label>Kode</label>
+<label>Nama Kelompok</label>
 <input
 type="text"
-name="kode"
-placeholder="Contoh : KDF001"
+name="nama_kelompok"
+placeholder="Masukkan Nama Kelompok"
 required>
 </div>
 
 <div class="input-group">
-<label>Tipe</label>
+<label>Nomor Registrasi</label>
+<input
+type="text"
+name="nomor_registrasi"
+placeholder="Masukkan Nomor Registrasi"
+required>
+</div>
 
-<select name="tipe" required>
+</div>
 
-<option value="">Pilih Tipe</option>
-
-<option>Kelompok</option>
-<option>Anggota</option>
-<option>Produksi</option>
-<option>Inventaris</option>
-<option>Keuangan</option>
-<option>Pemasaran</option>
-<option>Pertemuan</option>
-
-</select>
-
+<div class="input-group">
+<label>Jumlah Anggota</label>
+<input
+type="number"
+name="jumlah_anggota"
+placeholder="Masukkan Jumlah Anggota"
+required>
 </div>
 
 </div>
 
 <div class="row">
 
-<div class="input-group full-width">
+<div class="input-group">
+<label>Desa</label>
+<input
+type="text"
+name="desa"
+placeholder="Masukkan Nama Desa"
+required>
+</div>
 
-<label>Isi Kodifikasi</label>
+<div class="input-group">
+<label>Kecamatan</label>
+<input
+type="text"
+name="kecamatan"
+placeholder="Masukkan Nama Kecamatan"
+required>
+</div>
 
-<textarea
-name="isi"
-rows="6"
-placeholder="Masukkan isi atau keterangan kodifikasi..."
-required></textarea>
+</div>
+
+<div class="row">
+
+<div class="input-group">
+<label>Kabupaten/Kota</label>
+<input
+type="text"
+name="kabupaten"
+placeholder="Masukkan Kabupaten/Kota"
+required>
+</div>
+
+<div class="input-group">
+<label>Nomor Telepon</label>
+<input
+type="tel"
+name="telepon"
+placeholder="08xxxxxxxxxx">
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-group">
+<label>Tahun Berdiri</label>
+<input
+type="number"
+name="tahun_berdiri"
+placeholder="Contoh : 2020"
+min="1900"
+max="2100">
+</div>
+
+<div class="input-group">
+
+<label>Komoditas Utama</label>
+
+<select name="komoditas">
+
+<option value="">Pilih Komoditas</option>
+
+<option>Ikan Gabus</option>
+<option>Ikan Patin</option>
+<option>Ikan Lele</option>
+<option>Ikan Nila</option>
+<option>Ikan Haruan</option>
+<option>Kerupuk Ikan</option>
+<option>Abon Ikan</option>
+<option>Amplang</option>
+<option>Belut</option>
+<option>Lainnya</option>
+
+</select>
 
 </div>
 
@@ -497,7 +562,7 @@ form.addEventListener("submit", function(e){
 e.preventDefault();
 
 fetch(
-"https://script.google.com/macros/s/AKfycbxkOnC2Gz6ZfSyvfxdUjRiGUEHb2NhCoNrJ0QRNr9WMp50AHSA4GpVvXStP_ZICbBYRyQ/exec",
+"https://script.google.com/macros/s/AKfycbxS21iU86ap9kxCAn10Wgn4heSHfEeII1KqcxGaUlOC6ziAI-88HizGdFviQ_LPRsr-7w/exec",
 {
 method:"POST",
 body:new FormData(form)
