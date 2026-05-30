@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistem Informasi Poklahsar</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f5f7fb;
+}
+
+/* HEADER */
+
+header{
+background:linear-gradient(135deg,#0d47a1,#1976d2);
+padding:15px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+font-size:24px;
+font-weight:bold;
+}
+
+.profile{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+/* HERO */
+
+.hero{
+height:400px;
+background:
+linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url('https://images.unsplash.com/photo-1510130387422-82bed34b37e9');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.hero-content p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+.btn{
+padding:12px 25px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+margin:5px;
+}
+
+.btn-primary{
+background:#1976d2;
+color:white;
+}
+
+.btn-light{
+background:white;
+color:#1976d2;
+}
+
+/* STATISTIK */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:40px;
+}
+
+.stat-card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.stat-card i{
+font-size:35px;
+color:#1976d2;
+margin-bottom:10px;
+}
+
+.stat-card h2{
+color:#0d47a1;
+}
+
+/* MENU */
+
+.section-title{
+text-align:center;
+margin-top:20px;
+color:#0d47a1;
+}
+
+.menu-grid{
+padding:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.menu-card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;
+cursor:pointer;
+text-align:center;
+}
+
+.menu-card:hover{
+transform:translateY(-8px);
+}
+
+.menu-card i{
+font-size:45px;
+color:#1976d2;
+margin-bottom:15px;
+}
+
+/* AKTIVITAS */
+
+.activity{
+padding:40px;
+}
+
+.activity-box{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.activity ul{
+list-style:none;
+}
+
+.activity li{
+padding:12px;
+border-bottom:1px solid #ddd;
+}
+
+/* FOOTER */
+
+footer{
+background:#0d47a1;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">
+<i class="fas fa-fish"></i>
+<span>SI POKLAHSAR</span>
+</div>
+
+<div class="profile">
+<i class="fas fa-user-circle fa-2x"></i>
+Admin
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Sistem Informasi Poklahsar</h1>
+<p>
+Digitalisasi Administrasi Kelompok Pengolah dan Pemasar Hasil Perikanan
+</p>
+
+<button class="btn btn-primary">
+<i class="fas fa-folder-open"></i>
+ Kelola Data
+</button>
+
+<button class="btn btn-light">
+<i class="fas fa-chart-line"></i>
+ Lihat Laporan
+</button>
+</div>
+</section>
+
+<section class="stats">
+
+<div class="stat-card">
+<i class="fas fa-users"></i>
+<h2>35</h2>
+<p>Anggota</p>
+</div>
+
+<div class="stat-card">
+<i class="fas fa-fish"></i>
+<h2>120</h2>
+<p>Produksi</p>
+</div>
+
+<div class="stat-card">
+<i class="fas fa-wallet"></i>
+<h2>Rp 15 Jt</h2>
+<p>Kas Kelompok</p>
+</div>
+
+<div class="stat-card">
+<i class="fas fa-calendar-check"></i>
+<h2>18</h2>
+<p>Pertemuan</p>
+</div>
+
+</section>
+
+<h2 class="section-title">Menu Utama</h2>
+
+<section class="menu-grid">
+
+<div class="menu-card">
+<i class="fas fa-users"></i>
+<h3>Kelompok</h3>
+<p>Data Kelompok Poklahsar</p>
+</div>
+
+<div class="menu-card">
+<i class="fas fa-book"></i>
+<h3>Buku Administrasi</h3>
+<p>Data Anggota, Kas, Produksi, Agenda</p>
+</div>
+
+<div class="menu-card">
+<i class="fas fa-store"></i>
+<h3>Pengolahan & Pemasaran</h3>
+<p>Data Produksi dan Penjualan</p>
+</div>
+
+<div class="menu-card">
+<i class="fas fa-boxes"></i>
+<h3>Inventaris Barang</h3>
+<p>Pengelolaan Aset Kelompok</p>
+</div>
+
+<div class="menu-card">
+<i class="fas fa-money-bill-wave"></i>
+<h3>Keuangan</h3>
+<p>Iuran dan Pinjaman Anggota</p>
+</div>
+
+<div class="menu-card">
+<i class="fas fa-print"></i>
+<h3>Laporan</h3>
+<p>Cetak Dokumen dan Arsip</p>
+</div>
+
+</section>
+
+<section class="activity">
+
+<h2 class="section-title">Aktivitas Terbaru</h2>
+
+<div class="activity-box">
+
+<ul>
+<li>📌 Pertemuan Kelompok Bulanan - 15 Juli 2025</li>
+<li>📌 Produksi Kerupuk Ikan Batch 12</li>
+<li>📌 Pembayaran Iuran Bulan Juni</li>
+<li>📌 Penyusunan RUK dan RUB Tahun 2025</li>
+<li>📌 Inventarisasi Peralatan Produksi</li>
+</ul>
+
+</div>
+
+</section>
+
+<footer>
+© 2025 Sistem Informasi Poklahsar | Fakultas Perikanan dan Kelautan
+</footer>
+
+</body>
+</html>
