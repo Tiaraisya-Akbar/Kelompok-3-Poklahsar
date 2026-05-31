@@ -373,7 +373,7 @@ grid-template-columns:1fr;
 
 <div class="page-header">
 <h2>Tambah Buku Agenda</h2>
-<p>Input Rencana usaha bersama kelompok pengolah dan pemasar hasil perikanan.</p>
+<p>Input Pencatatan agenda dan kegiatan kelompok pengolah dan pemasar hasil perikanan.</p>
 </div>
 
 <form id="AgendaForm">
@@ -399,19 +399,12 @@ grid-template-columns:1fr;
 </div>
 
 <div class="input-group">
-<label>Kegiatan Usaha</label>
+<label>Tanggal</label>
 
-<select name="kegiatan" required>
-
-<option value="">Pilih Kegiatan</option>
-
-<option>Pengolahan Hasil Perikanan</option>
-<option>Pemasaran Produk</option>
-<option>Pengemasan Produk</option>
-<option>Pengadaan Bahan Baku</option>
-<option>Pengadaan Peralatan</option>
-
-</select>
+<input
+type="date"
+name="tanggal"
+required>
 
 </div>
 
@@ -422,22 +415,23 @@ grid-template-columns:1fr;
 <div class="row">
 
 <div class="input-group">
-<label>Tanggal</label>
+<label>Agenda</label>
 
 <input
-type="date"
-name="tanggal"
+type="text"
+name="agenda"
+placeholder="Contoh: Pelatihan Pengolahan Ikan"
 required>
 
 </div>
 
 <div class="input-group">
-<label>Nama Produk</label>
+<label>Tempat Kegiatan</label>
 
 <input
 type="text"
-name="produk"
-placeholder="Contoh: Kerupuk Ikan">
+name="tempat"
+placeholder="Masukkan Tempat Kegiatan">
 
 </div>
 
@@ -448,29 +442,22 @@ placeholder="Contoh: Kerupuk Ikan">
 <div class="row">
 
 <div class="input-group">
-<label>Satuan</label>
+<label>Penanggung Jawab</label>
 
-<select name="satuan">
-
-<option value="">Pilih Satuan</option>
-
-<option>Kg</option>
-<option>Pcs</option>
-<option>Bungkus</option>
-<option>Unit</option>
-<option>Paket</option>
-
-</select>
+<input
+type="text"
+name="penanggung_jawab"
+placeholder="Masukkan Nama Penanggung Jawab">
 
 </div>
 
 <div class="input-group">
-<label>Volume</label>
+<label>Jumlah Peserta</label>
 
 <input
 type="number"
-name="volume"
-placeholder="Masukkan Volume">
+name="jumlah_peserta"
+placeholder="Masukkan Jumlah Peserta">
 
 </div>
 
@@ -480,30 +467,21 @@ placeholder="Masukkan Volume">
 
 <div class="row">
 
-<div class="input-group">
-<label>Nilai (Rp)</label>
+<div class="input-group full-width">
 
-<input
-type="number"
-name="nilai"
-placeholder="Masukkan Nilai">
+<label>Keterangan</label>
 
-</div>
-
-<div class="input-group">
-<label>Sumber Dana</label>
-
-<select name="sumber_dana">
-
-<option value="">Pilih Sumber Dana</option>
-
-<option>Swadaya Kelompok</option>
-<option>Bantuan Pemerintah</option>
-<option>PMW</option>
-<option>KUR</option>
-<option>Lainnya</option>
-
-</select>
+<textarea
+name="keterangan"
+rows="4"
+placeholder="Masukkan Keterangan Agenda"
+style="
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+resize:vertical;">
+</textarea>
 
 </div>
 
@@ -515,41 +493,12 @@ placeholder="Masukkan Nilai">
 
 <div class="input-group full-width">
 
-<label>Rencana Penggunaan Dana</label>
+<label>Dokumentasi Kegiatan</label>
 
-<textarea
-name="rencana_penggunaan"
-rows="4"
-placeholder="Tuliskan rencana penggunaan dana"
-style="
-width:100%;
-padding:12px;
-border:1px solid #ddd;
-border-radius:8px;
-resize:vertical;"></textarea>
-
-</div>
-
-</div>
-
-<!-- BARIS 6 -->
-
-<div class="row">
-
-<div class="input-group full-width">
-
-<label>Keterangan</label>
-
-<textarea
-name="keterangan"
-rows="3"
-placeholder="Masukkan keterangan tambahan"
-style="
-width:100%;
-padding:12px;
-border:1px solid #ddd;
-border-radius:8px;
-resize:vertical;"></textarea>
+<input
+type="file"
+name="dokumentasi"
+accept="image/*">
 
 </div>
 
