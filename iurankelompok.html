@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -119,6 +121,21 @@ margin-bottom:8px;
 color:#666;
 }
 
+/* CARD */
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+margin-bottom:25px;
+}
+
+.card h3{
+color:#0b5ed7;
+margin-bottom:20px;
+}
+
 /* STATISTIK */
 
 .stats-grid{
@@ -134,11 +151,6 @@ padding:25px;
 border-radius:15px;
 text-align:center;
 box-shadow:0 4px 12px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.stat-card:hover{
-transform:translateY(-4px);
 }
 
 .stat-card i{
@@ -148,27 +160,12 @@ margin-bottom:15px;
 }
 
 .stat-card h4{
-color:#666;
 margin-bottom:10px;
+color:#666;
 }
 
 .stat-card h2{
 color:#0b5ed7;
-}
-
-/* CARD */
-
-.card{
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 4px 12px rgba(0,0,0,.08);
-margin-bottom:25px;
-}
-
-.card h3{
-color:#0b5ed7;
-margin-bottom:20px;
 }
 
 /* FORM */
@@ -202,9 +199,9 @@ margin-bottom:15px;
 .btn-excel{
 display:inline-block;
 padding:10px 20px;
-color:white;
-text-decoration:none;
 border-radius:8px;
+text-decoration:none;
+color:white;
 font-weight:600;
 margin-top:10px;
 }
@@ -221,16 +218,12 @@ background:#28a745;
 background:#1d6f42;
 }
 
-/* LOOKER */
-
 .looker-container{
 width:100%;
 height:600px;
 border:none;
 border-radius:12px;
 }
-
-/* MOBILE */
 
 @media(max-width:768px){
 
@@ -252,6 +245,7 @@ grid-template-columns:1fr;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -261,28 +255,6 @@ grid-template-columns:1fr;
 <div class="logo">
 <h2>POKLAHSAR</h2>
 <p>Kelompok Pengolah dan Pemasar Hasil Perikanan</p>
-</div>
-
-<div class="menu">
-
-<ul>
-
-<li>
-<a href="index.html">
-<i class="fas fa-home"></i>
-Menu
-</a>
-</li>
-
-<li>
-<a href="iurankelompok.html" class="active">
-<i class="fas fa-wallet"></i>
-Iuran Kelompok
-</a>
-</li>
-
-</ul>
-
 </div>
 
 </div>
@@ -301,10 +273,11 @@ Iuran Kelompok
 
 <div class="page-header">
 
-<h2>💰 Iuran Kelompok POKLAHSAR</h2>
+<h2>💰 Iuran Kelompok</h2>
 
 <p>
-Pengelolaan tabungan, iuran wajib dan iuran sukarela anggota kelompok.
+Pengelolaan iuran wajib, iuran sukarela,
+dan tabungan anggota kelompok.
 </p>
 
 </div>
@@ -316,19 +289,19 @@ Pengelolaan tabungan, iuran wajib dan iuran sukarela anggota kelompok.
 <div class="stat-card">
 <i class="fas fa-piggy-bank"></i>
 <h4>Total Tabungan</h4>
-<h2>Rp 5.270.000</h2>
+<h2>Rp 0</h2>
 </div>
 
 <div class="stat-card">
 <i class="fas fa-wallet"></i>
 <h4>Iuran Wajib</h4>
-<h2>Rp 1.930.000</h2>
+<h2>Rp 0</h2>
 </div>
 
 <div class="stat-card">
 <i class="fas fa-hand-holding-heart"></i>
 <h4>Iuran Sukarela</h4>
-<h2>Rp 780.000</h2>
+<h2>Rp 0</h2>
 </div>
 
 <div class="stat-card">
@@ -339,18 +312,16 @@ Pengelolaan tabungan, iuran wajib dan iuran sukarela anggota kelompok.
 
 </div>
 
-<!-- FORM DAN DATA -->
+<!-- FORM DAN DATA IURAN -->
 
 <div class="card">
 
 <h3>
-<i class="fas fa-link"></i>
- Form dan Data Iuran Kelompok
+<i class="fas fa-money-check-alt"></i>
+ Form dan Data Iuran
 </h3>
 
 <div class="form-links">
-
-<!-- FORM IURAN -->
 
 <div class="form-card">
 
@@ -364,7 +335,7 @@ Input data iuran wajib, iuran sukarela,
 dan tabungan anggota kelompok.
 </p>
 
-<a href="https://forms.gle/2Lr6B3ZSZaacdchX8"
+<a href="LINK_FORM_IURAN"
 class="btn-form"
 target="_blank">
 
@@ -375,8 +346,6 @@ target="_blank">
 
 </div>
 
-<!-- DATA IURAN -->
-
 <div class="form-card">
 
 <h4>
@@ -385,11 +354,11 @@ target="_blank">
 </h4>
 
 <p>
-Melihat hasil pengisian dan rekapitulasi
-iuran kelompok.
+Lihat hasil pengisian dan rekapitulasi
+iuran anggota kelompok.
 </p>
 
-<a href="https://docs.google.com/spreadsheets/d/1hrpQgzlsfIiz-R87sY9QyoFtVLlHWWYkod7GwoYaICg/edit?usp=sharing"
+<a href="LINK_SPREADSHEET_IURAN"
 class="btn-sheet"
 target="_blank">
 
@@ -404,7 +373,7 @@ target="_blank">
 
 </div>
 
-<!-- DASHBOARD -->
+<!-- DASHBOARD IURAN -->
 
 <div class="card">
 
@@ -422,14 +391,104 @@ tabungan anggota, dan kontribusi kelompok.
 
 <iframe
 class="looker-container"
-src="https://datastudio.google.com/embed/reporting/e22f7834-68d4-4ffc-9334-a3478bd038e0/page/page_12345"
+src="LINK_LOOKER_IURAN"
 allowfullscreen>
 
 </iframe>
 
 </div>
 
- <!-- GRAFIK PERKEMBANGAN -->
+<!-- TINGKAT KEPUASAN -->
+
+<div class="card">
+
+<h3>
+<i class="fas fa-smile"></i>
+ Tingkat Kepuasan Iuran Kelompok
+</h3>
+
+<div class="form-links">
+
+<div class="form-card">
+
+<h4>
+<i class="fas fa-clipboard-check"></i>
+ Form Tingkat Kepuasan
+</h4>
+
+<p>
+
+Berikan penilaian terhadap sistem
+pengelolaan iuran kelompok.
+
+</p>
+
+<a href="LINK_FORM_KEPUASAN"
+class="btn-form"
+target="_blank">
+
+<i class="fas fa-external-link-alt"></i>
+ Buka Form
+
+</a>
+
+</div>
+
+<div class="form-card">
+
+<h4>
+<i class="fas fa-table"></i>
+ Hasil Tingkat Kepuasan
+</h4>
+
+<p>
+
+Lihat hasil pengisian tingkat kepuasan
+anggota terhadap sistem iuran kelompok.
+
+</p>
+
+<a href="LINK_SHEET_KEPUASAN"
+class="btn-sheet"
+target="_blank">
+
+<i class="fas fa-table"></i>
+ Lihat Hasil
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- DASHBOARD KEPUASAN -->
+
+<div class="card">
+
+<h3>
+<i class="fas fa-chart-bar"></i>
+ Dashboard Tingkat Kepuasan
+</h3>
+
+<p style="margin-bottom:15px;color:#666;">
+
+Dashboard analisis kepuasan anggota
+terhadap sistem iuran kelompok.
+
+</p>
+
+<iframe
+class="looker-container"
+src="LINK_LOOKER_KEPUASAN"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+ <!-- GRAFIK PERKEMBANGAN IURAN -->
 
 <div class="card">
 
@@ -439,7 +498,9 @@ allowfullscreen>
 </h3>
 
 <p style="margin-bottom:15px;color:#666;">
+
 Grafik perkembangan pembayaran iuran anggota kelompok dari waktu ke waktu.
+
 </p>
 
 <div style="
@@ -468,33 +529,71 @@ font-size:18px;">
  Informasi Iuran Kelompok
 </h3>
 
-<div style="line-height:2; color:#555;">
+<div style="line-height:2;color:#555;">
+
+<p>
+✅ Iuran wajib dibayarkan sesuai kesepakatan kelompok.
+</p>
+
+<p>
+✅ Iuran sukarela dapat diberikan sesuai kemampuan anggota.
+</p>
+
+<p>
+✅ Tabungan kelompok digunakan untuk mendukung kegiatan dan pengembangan usaha kelompok.
+</p>
+
+<p>
+✅ Seluruh transaksi dicatat secara digital dan dapat dipantau melalui dashboard sistem.
+</p>
+
+<p>
+✅ Data pembayaran tersimpan dan dapat direkap kapan saja.
+</p>
 
 </div>
 
-<!-- LAPORAN -->
+</div>
+
+<!-- PUSAT DOWNLOAD -->
 
 <div class="card">
 
 <h3>
-<i class="fas fa-file-excel"></i>
- Laporan Iuran Kelompok
+<i class="fas fa-download"></i>
+ Pusat Download
 </h3>
 
 <p style="margin-bottom:20px;color:#666;">
 
-Download laporan rekapitulasi iuran kelompok dalam format Excel.
+Download seluruh laporan, data, dan hasil analisis yang berkaitan dengan iuran kelompok.
 
 </p>
 
-<a href="hasiliurankelompok.xlsx"
+<div style="
+display:flex;
+gap:15px;
+flex-wrap:wrap;">
+
+<a href="laporaniuran.xlsx"
 class="btn-excel"
 target="_blank">
 
-<i class="fas fa-download"></i>
- Download Laporan Iuran
+<i class="fas fa-file-excel"></i>
+ Laporan Iuran
 
 </a>
+
+<a href="hasilanalisisiuran.xlsx"
+class="btn-sheet"
+target="_blank">
+
+<i class="fas fa-chart-bar"></i>
+ Analisis PIECES
+
+</a>
+
+</div>
 
 </div>
 
