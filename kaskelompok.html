@@ -399,12 +399,11 @@ grid-template-columns:1fr;
 </div>
 
 <div class="input-group">
-<label>Nama Tamu</label>
+<label>Tanggal Transaksi</label>
 
 <input
-type="text"
-name="nama"
-placeholder="Masukkan Nama Tamu"
+type="date"
+name="tanggal"
 required>
 
 </div>
@@ -416,22 +415,16 @@ required>
 <div class="row">
 
 <div class="input-group">
-<label>Tanggal Datang</label>
+<label>Jenis Transaksi</label>
 
-<input
-type="date"
-name="tanggal_datang"
-required>
+<select name="jenis_transaksi" required>
 
-</div>
+<option value="">Pilih Jenis Transaksi</option>
 
-<div class="input-group">
-<label>Nomor Telepon</label>
+<option>Kas Masuk</option>
+<option>Kas Keluar</option>
 
-<input
-type="tel"
-name="telepon"
-placeholder="08xxxxxxxxxx">
+</select>
 
 </div>
 
@@ -442,21 +435,12 @@ placeholder="08xxxxxxxxxx">
 <div class="row">
 
 <div class="input-group">
-<label>Jabatan</label>
+<label>Jumlah</label>
 
 <input
-type="text"
-name="jabatan"
-placeholder="Masukkan Jabatan">
-
-</div>
-
-<div class="input-group">
-<label>Tanggal Pergi</label>
-
-<input
-type="date"
-name="tanggal_pergi">
+type="number"
+name="jumlah"
+placeholder="Masukkan Jumlah">
 
 </div>
 
@@ -466,20 +450,24 @@ name="tanggal_pergi">
 
 <div class="row">
 
-<div class="input-group" style="grid-column:span 2;">
+<div class="input-group">
+<label>Nominal (Rp)</label>
 
-<label>Tujuan Kunjungan</label>
+<input
+type="number"
+name="nominal"
+placeholder="Masukkan Nominal"
+required>
 
-<textarea
-name="tujuan"
-rows="3"
-placeholder="Masukkan Tujuan Kunjungan"
-style="
-width:100%;
-padding:12px;
-border:1px solid #ddd;
-border-radius:8px;
-resize:vertical;"></textarea>
+</div>
+
+<div class="input-group">
+<label>Keterangan</label>
+
+<input
+type="text"
+name="keterangan"
+placeholder="Masukkan Keterangan">
 
 </div>
 
@@ -489,37 +477,14 @@ resize:vertical;"></textarea>
 
 <div class="row">
 
-<div class="input-group" style="grid-column:span 2;">
-
-<label>Pesan dan Kesan</label>
-
-<textarea
-name="pesan"
-rows="3"
-placeholder="Masukkan Pesan dan Kesan"
-style="
-width:100%;
-padding:12px;
-border:1px solid #ddd;
-border-radius:8px;
-resize:vertical;"></textarea>
-
-</div>
-
-</div>
-
-<!-- BARIS 6 -->
-
-<div class="row">
-
 <div class="input-group full-width">
 
-<label>Foto Tamu / Dokumentasi</label>
+<label>Bukti Transaksi</label>
 
 <input
 type="file"
-name="foto"
-accept="image/*">
+name="bukti"
+accept="image/*,.pdf">
 
 </div>
 
@@ -552,7 +517,6 @@ Simpan
 <div id="message"></div>
 
 </form>
-
 </div>
 
 </div>
