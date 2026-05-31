@@ -388,108 +388,158 @@ grid-template-columns:1fr;
 
 <div class="row">
 
-<div class="input-group">
-<label>Nama Kelompok</label>
-<select name="kelompok" required>
-<option value="">Pilih Kelompok</option>
-<option>Bunga Merah</option>
-<option>Srikandi</option>
-<option>Sumber Rejeki</option>
-<option>Waroh</option>
-</select>
-</div>
+    <div class="input-group">
+        <label>Nama Kelompok</label>
+        <select name="kelompok" required>
+            <option value="">Pilih Kelompok</option>
+            <option>Bunga Merah</option>
+            <option>Srikandi</option>
+            <option>Sumber Rejeki</option>
+            <option>Waroh</option>
+        </select>
+    </div>
 
-<div class="input-group">
-<label>Kode Barang</label>
-<input type="text" name="kode_barang"
-placeholder="Masukkan Kode Barang" required>
-</div>
-
-</div>
-
-<div class="row">
-
-<div class="input-group">
-<label>Nama Barang</label>
-<input type="text" name="nama_barang"
-placeholder="Masukkan Nama Barang" required>
-</div>
-
-<div class="input-group">
-<label>Kondisi Barang</label>
-<select name="kondisi_barang" required>
-<option value="">Pilih Kondisi</option>
-<option>Baik</option>
-<option>Rusak Ringan</option>
-<option>Rusak Sedang</option>
-<option>Rusak Berat</option>
-</select>
-</div>
+    <div class="input-group">
+        <label>Jenis Produk</label>
+        <select name="jenis_produk" required>
+            <option value="">Pilih Produk</option>
+            <option>Kerupuk Ikan</option>
+            <option>Abon Ikan</option>
+            <option>Amplang</option>
+            <option>Bakso Ikan</option>
+            <option>Nugget Ikan</option>
+            <option>Sambal Ikan</option>
+            <option>Pindang Ikan</option>
+            <option>Ikan Asap</option>
+            <option>Lainnya</option>
+        </select>
+    </div>
 
 </div>
 
 <div class="row">
 
-<div class="input-group">
-<label>Penanggung Jawab</label>
-<input type="text" name="pic"
-placeholder="Masukkan Nama Penanggung Jawab" required>
-</div>
+    <div class="input-group">
+        <label>Hasil Produksi</label>
+        <input type="text"
+               name="hasil_produksi"
+               placeholder="Masukkan Hasil Produksi"
+               required>
+    </div>
 
-<div class="input-group">
-<label>Tanggal Terima</label>
-<input type="date" name="tanggal_terima" required>
-</div>
-
-</div>
-
-<div class="row">
-
-<div class="input-group">
-<label>Jumlah Barang</label>
-<input type="number" name="jumlah_barang"
-placeholder="Masukkan Jumlah Barang" required>
-</div>
-
-<div class="input-group">
-<label>Keterangan</label>
-<input type="text" name="keterangan"
-placeholder="Masukkan Keterangan Barang">
-</div>
+    <div class="input-group">
+        <label>Bahan Baku Utama</label>
+        <input type="text"
+               name="bahan_baku"
+               placeholder="Contoh : Ikan Gabus">
+    </div>
 
 </div>
 
 <div class="row">
 
-<div class="input-group full-width">
-<label>Lokasi Penyimpanan</label>
-<input type="text" name="lokasi"
-placeholder="Masukkan Lokasi Penyimpanan">
-</div>
+    <div class="input-group">
+        <label>Jumlah Bahan Baku (Kg)</label>
+        <input type="number"
+               name="jumlah_bahan_baku"
+               placeholder="Masukkan Jumlah Bahan Baku">
+    </div>
+
+    <div class="input-group">
+        <label>Satuan</label>
+        <select name="satuan">
+            <option value="">Pilih Satuan</option>
+            <option>Kg</option>
+            <option>Ton</option>
+            <option>Pcs</option>
+            <option>Bungkus</option>
+            <option>Botol</option>
+            <option>Kotak</option>
+        </select>
+    </div>
 
 </div>
 
 <div class="row">
 
-<div class="input-group full-width">
-<label>Foto Barang</label>
-<input type="file" name="foto_barang"
-accept="image/*">
+    <div class="input-group">
+        <label>Tanggal Produksi</label>
+        <input type="date"
+               name="tanggal_produksi"
+               required>
+    </div>
+
+    <div class="input-group">
+        <label>Volume Produksi per Bulan</label>
+        <input type="number"
+               name="volume_produksi"
+               placeholder="Masukkan Volume Produksi">
+    </div>
+
 </div>
+
+<div class="row">
+
+    <div class="input-group">
+        <label>Harga Jual per Satuan (Rp)</label>
+        <input type="number"
+               name="harga_jual"
+               placeholder="Masukkan Harga Jual">
+    </div>
+
+    <div class="input-group">
+        <label>Harga Produksi (Rp)</label>
+        <input type="number"
+               name="harga_produksi"
+               placeholder="Masukkan Harga Produksi">
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="input-group">
+        <label>Harga Penjualan (Rp)</label>
+        <input type="number"
+               name="harga_penjualan"
+               placeholder="Masukkan Harga Penjualan">
+    </div>
+
+    <div class="input-group">
+        <label>Tujuan Pemasaran</label>
+        <select name="tujuan_pemasaran">
+            <option value="">Pilih Tujuan</option>
+            <option>Lokal</option>
+            <option>Kabupaten</option>
+            <option>Provinsi</option>
+            <option>Nasional</option>
+        </select>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="input-group full-width">
+        <label>Foto Produk</label>
+        <input type="file"
+               name="foto_produk"
+               accept="image/*">
+    </div>
 
 </div>
 
 <div class="button-group">
 
-<button type="reset" class="btn btn-reset">
-<i class="fas fa-rotate-left"></i>
-Reset
-</button>
+    <button type="reset" class="btn btn-reset">
+        <i class="fas fa-rotate-left"></i>
+        Reset
+    </button>
 
-<button type="submit" class="btn btn-save">
-<i class="fas fa-save"></i>
-Simpan
-</button>
+    <button type="submit" class="btn btn-save">
+        <i class="fas fa-save"></i>
+        Simpan
+    </button>
 
 </div>
 
