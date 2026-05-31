@@ -225,122 +225,140 @@ width:100%;
 
 <body>
     
+```html
 <!-- SIDEBAR -->
 
 <div class="sidebar">
 
-<div class="logo">
+    <div class="logo">
 
-<h2>POKLAHSAR</h2>
+        <h2>POKLAHSAR</h2>
 
-<p>
-Kelompok Pengolah dan Pemasar Hasil Perikanan
-</p>
+        <p>Kelompok Pengolah dan Pemasar Hasil Perikanan</p>
+
+    </div>
+
+    <div class="menu">
+
+        <ul>
+
+            <!-- MENU -->
+
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    Menu
+                </a>
+            </li>
+
+            <!-- INDIVIDU -->
+
+            <li>
+
+                <a href="#"
+                   onclick="toggleMenu('individuMenu',this);return false;">
+
+                    <i class="fas fa-user"></i>
+                    Individu
+
+                    <span style="float:right;">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+
+                </a>
+
+                <ul id="individuMenu" class="submenu">
+
+                    <li><a href="kelompok.html">Kelompok</a></li>
+
+                    <li><a href="buku.html">Buku</a></li>
+
+                    <li><a href="anggota.html">Data Anggota</a></li>
+
+                    <li><a href="tamukelompok.html">Tamu Kelompok</a></li>
+
+                    <li><a href="kaskelompok.html">Kas Kelompok</a></li>
+
+                    <li><a href="produksikelompok.html">Produksi Kelompok</a></li>
+
+                    <li><a href="notulenrapat.html">Notulen Rapat</a></li>
+
+                    <li><a href="ruk.html">RUK</a></li>
+
+                    <li><a href="rub.html">RUB</a></li>
+
+                    <li><a href="agenda.html">Agenda</a></li>
+
+                    <li><a href="rencanakegiatan.html">Rencana Kegiatan</a></li>
+
+                    <li><a href="polaproduksi.html">Pola Produksi</a></li>
+
+                    <li><a href="inventarisbarang.html">Inventaris Barang</a></li>
+
+                    <li><a href="pertemuankelompok.html">Pertemuan Kelompok</a></li>
+
+                    <li><a href="iurankelompok.html">Iuran Kelompok</a></li>
+
+                    <li><a href="pinjamananggota.html">Pinjaman Anggota</a></li>
+
+                    <li><a href="kodifikasikelompok.html">Kodifikasi Kelompok</a></li>
+
+                </ul>
+
+            </li>
+
+            <!-- KELOMPOK -->
+
+            <li>
+
+                <a href="#"
+                   onclick="toggleMenu('kelompokMenu',this);return false;">
+
+                    <i class="fas fa-users"></i>
+                    Kelompok
+
+                    <span style="float:right;">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+
+                </a>
+
+                <ul id="kelompokMenu" class="submenu">
+
+                    <li>
+                        <a href="sejarahkelompok.html">
+                            Sejarah Kelompok
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="kelompok.html">
+                            Data Dasar Kelompok
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="anggota.html">
+                            Data Anggota Kelompok
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="datakomoditasperikanan.html">
+                            Data Komoditas Perikanan
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+        </ul>
+
+    </div>
 
 </div>
-
-<div class="menu">
-
-<ul>
-
-<li>
-<a href="index.html">
-<i class="fas fa-home"></i>
- Menu
-</a>
-</li>
-
-<!-- INDIVIDU -->
-
-<li>
-
-<a href="#">
-<i class="fas fa-user"></i>
- Individu
-</a>
-
-<ul class="submenu">
-
-<li><a href="buku.html">Buku</a></li>
-
-<li><a href="rencanakegiatan.html">
-Rencana Kegiatan
-</a></li>
-
-<li><a href="produksikelompok.html">
-Pola Produksi
-</a></li>
-
-<li><a href="inventarisbarang.html">
-Inventaris Barang
-</a></li>
-
-<li><a href="pertemuankelompok.html">
-Pertemuan Kelompok
-</a></li>
-
-<li><a href="iurankelompok.html">
-Iuran Kelompok
-</a></li>
-
-<li><a href="pinjamananggota.html">
-Pinjaman Anggota
-</a></li>
-
-<li><a href="kodifikasikelompok.html">
-Kodifikasi Kelompok
-</a></li>
-
-<li><a href="printdokumen.html">
-Print Dokumen
-</a></li>
-
-</ul>
-
-</li>
-
-<!-- KELOMPOK -->
-
-<li>
-
-<a href="#">
-<i class="fas fa-users"></i>
- Kelompok
-</a>
-
-<ul class="submenu">
-
-<li>
-<a href="sejarahkelompok.html">
-Sejarah Kelompok
-</a>
-</li>
-
-<li>
-<a href="kelompok.html">
-Data Dasar Kelompok
-</a>
-</li>
-
-<li>
-<a href="anggota.html">
-Data Anggota Kelompok
-</a>
-</li>
-
-<li>
-<a href="datakomoditasperikanan.html">
-Data Komoditas Perikanan
-</a>
-</li>
-
-</ul>
-
-</li>
-
-</div>
-
-</div>
+```
 
 <div class="main">
 
