@@ -382,31 +382,21 @@ grid-template-columns:1fr;
 
 <div class="row">
 
-<div class="input-group">
-<label>Nama Kelompok</label>
+    <div class="input-group">
+        <label>Nama Kelompok</label>
+        <select name="kelompok" required>
+            <option value="">Pilih Kelompok</option>
+            <option>Bunga Merah</option>
+            <option>Srikandi</option>
+            <option>Sumber Rejeki</option>
+            <option>Waroh</option>
+        </select>
+    </div>
 
-<select name="kelompok" required>
-
-<option value="">Pilih Kelompok</option>
-
-<option>Bunga Merah</option>
-<option>Srikandi</option>
-<option>Sumber Rejeki</option>
-<option>Waroh</option>
-
-</select>
-
-</div>
-
-<div class="input-group">
-<label>Tanggal Rapat</label>
-
-<input
-type="date"
-name="tanggal_rapat"
-required>
-
-</div>
+    <div class="input-group">
+        <label>Tanggal Rapat</label>
+        <input type="date" name="tanggal_rapat" required>
+    </div>
 
 </div>
 
@@ -414,27 +404,23 @@ required>
 
 <div class="row">
 
-<div class="input-group">
-<label>Agenda Rapat</label>
+    <div class="input-group">
+        <label>Agenda Rapat</label>
+        <input
+            type="text"
+            name="agenda"
+            placeholder="Masukkan Agenda Rapat"
+            required>
+    </div>
 
-<input
-type="text"
-name="agenda"
-placeholder="Masukkan Agenda Rapat"
-required>
-
-</div>
-
-<div class="input-group">
-<label>Pemimpin Rapat</label>
-
-<input
-type="text"
-name="pemimpin_rapat"
-placeholder="Masukkan Nama Pemimpin Rapat"
-required>
-
-</div>
+    <div class="input-group">
+        <label>Pemimpin Rapat</label>
+        <input
+            type="text"
+            name="pemimpin_rapat"
+            placeholder="Masukkan Nama Pemimpin Rapat"
+            required>
+    </div>
 
 </div>
 
@@ -442,141 +428,88 @@ required>
 
 <div class="row">
 
-<div class="input-group">
-<label>Jabatan</label>
+    <div class="input-group">
+        <label>Jabatan</label>
+        <select name="jabatan">
+            <option value="">Pilih Jabatan</option>
+            <option>Ketua</option>
+            <option>Sekretaris</option>
+            <option>Bendahara</option>
+            <option>Anggota</option>
+        </select>
+    </div>
 
-<select name="jabatan">
-
-<option value="">Pilih Jabatan</option>
-
-<option>Ketua</option>
-<option>Sekretaris</option>
-<option>Bendahara</option>
-<option>Anggota</option>
-
-</select>
-
-</div>
-
-<div class="input-group">
-<label>Jumlah Peserta</label>
-
-<input
-type="number"
-name="jumlah_peserta"
-placeholder="Masukkan Jumlah Peserta">
-
-</div>
+    <div class="input-group">
+        <label>Jumlah Peserta</label>
+        <input
+            type="number"
+            name="jumlah_peserta"
+            placeholder="Masukkan Jumlah Peserta">
+    </div>
 
 </div>
 
 <!-- BARIS 4 -->
 
 <div class="row">
-
-<div class="input-group full-width">
-
-<label>Isi Pembahasan</label>
-
-<textarea
-name="isi_pembahasan"
-rows="5"
-placeholder="Tuliskan hasil pembahasan rapat"
-style="
-width:100%;
-padding:12px;
-border:1px solid #ddd;
-border-radius:8px;
-resize:vertical;"></textarea>
-
-</div>
-
+    <div class="input-group" style="grid-column:1 / -1;">
+        <label>Isi Pembahasan</label>
+        <textarea
+            name="isi_pembahasan"
+            rows="5"
+            placeholder="Tuliskan hasil pembahasan rapat"></textarea>
+    </div>
 </div>
 
 <!-- BARIS 5 -->
 
 <div class="row">
-
-<div class="input-group full-width">
-
-<label>Keputusan / Kesimpulan</label>
-
-<textarea
-name="kesimpulan"
-rows="4"
-placeholder="Tuliskan keputusan dan kesimpulan rapat"
-style="
-width:100%;
-padding:12px;
-border:1px solid #ddd;
-border-radius:8px;
-resize:vertical;"></textarea>
-
-</div>
-
+    <div class="input-group" style="grid-column:1 / -1;">
+        <label>Keputusan / Kesimpulan</label>
+        <textarea
+            name="kesimpulan"
+            rows="4"
+            placeholder="Tuliskan keputusan dan kesimpulan rapat"></textarea>
+    </div>
 </div>
 
 <!-- BARIS 6 -->
 
 <div class="row">
-
-<div class="input-group full-width">
-
-<label>Tindak Lanjut</label>
-
-<textarea
-name="tindak_lanjut"
-rows="3"
-placeholder="Tuliskan tindak lanjut hasil rapat"
-style="
-width:100%;
-padding:12px;
-border:1px solid #ddd;
-border-radius:8px;
-resize:vertical;"></textarea>
-
-</div>
-
+    <div class="input-group" style="grid-column:1 / -1;">
+        <label>Tindak Lanjut</label>
+        <textarea
+            name="tindak_lanjut"
+            rows="4"
+            placeholder="Tuliskan tindak lanjut hasil rapat"></textarea>
+    </div>
 </div>
 
 <!-- BARIS 7 -->
 
 <div class="row">
-
-<div class="input-group full-width">
-
-<label>Dokumentasi Rapat</label>
-
-<input
-type="file"
-name="foto_rapat"
-accept="image/*">
-
-</div>
-
+    <div class="input-group" style="grid-column:1 / -1;">
+        <label>Dokumentasi Rapat</label>
+        <input
+            type="file"
+            name="foto_rapat"
+            accept="image/*">
+    </div>
 </div>
 
 <!-- TOMBOL -->
 
 <div class="button-group">
 
-<button
-type="reset"
-class="btn btn-reset">
+    <button type="reset" class="btn btn-reset">
+        <i class="fas fa-rotate-left"></i>
+        Reset
+    </button>
 
-<i class="fas fa-rotate-left"></i>
-Reset
-
-</button>
-
-<button
-type="submit"
-class="btn btn-save">
-
-<i class="fas fa-save"></i>
-Simpan
-
-</button>
+    <button type="submit" class="btn btn-save">
+        <i class="fas fa-save"></i>
+        Simpan
+    </button>
 
 </div>
 
