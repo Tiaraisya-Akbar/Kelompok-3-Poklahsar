@@ -38,6 +38,24 @@ margin:auto;
 padding:25px;
 }
 
+/* Style Tambahan untuk Tombol Kembali */
+.btn-back {
+background:#6c757d;
+margin-bottom:20px;
+cursor:pointer;
+border:none;
+font-size:15px;
+font-weight:600;
+display:inline-flex;
+align-items:center;
+gap:8px;
+}
+
+.btn-back:hover {
+background:#5a6268;
+transform:translateY(-2px);
+}
+
 .card{
 background:white;
 padding:25px;
@@ -118,6 +136,10 @@ gap:20px;
 
 <div class="container">
 
+<button onclick="kembaliKeAsal()" class="btn btn-back">
+<i class="fas fa-arrow-left"></i> Kembali
+</button>
+
 <div class="card">
 
 <h2>Daftar Inventaris Kelompok</h2>
@@ -179,14 +201,14 @@ gap:20px;
 <td>Baik</td>
 </tr>
 
-  <tr>
+<tr>
 <td>8</td>
 <td>Meja Pengolahan</td>
 <td>1 Unit</td>
 <td>Baik</td>
 </tr>
 
-  <tr>
+<tr>
 <td>9</td>
 <td>cool box</td>
 <td>2 Unit</td>
@@ -232,7 +254,7 @@ Buka Spreadsheet
 <h2><i class="fas fa-star"></i> Form Kepuasan</h2>
 <p>Isi survei kepuasan pengguna sistem inventaris kelompok.</p>
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSfcU1zAS3bDvbLlzkXFQ9D9_Fn0-Qz9hulklYZNTTIVbETo_Q/viewform?usp=header\"
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfcU1zAS3bDvbLlzkXFQ9D9_Fn0-Qz9hulklYZNTTIVbETo_Q/viewform?usp=header"
 target="_blank"
 class="btn">
 Isi Survei
@@ -290,6 +312,24 @@ Download Excel
 <div class="footer">
 © 2026 Sistem Inventaris Kelompok POKLAHSAR
 </div>
+
+<script>
+function kembaliKeAsal() {
+    // 1. Cek apakah ada informasi halaman asal (referrer)
+    if (document.referrer) {
+        window.location.href = document.referrer;
+    } 
+    // 2. Jika tidak ada referrer tetapi ada riwayat tab, gunakan history back
+    else if (history.length > 1) {
+        history.back();
+    } 
+    // 3. Jika dibuka di tab baru secara manual (tanpa klik link/kosong), coba tutup tab
+    else {
+        alert("Tidak ada halaman sebelumnya untuk kembali.");
+        window.close();
+    }
+}
+</script>
 
 </body>
 </html>
