@@ -386,87 +386,131 @@ grid-template-columns:1fr;
 <label>Nama Kelompok</label>
 
 <select name="kelompok" required>
+
 <option value="">Pilih Kelompok</option>
+
 <option>Bunga Merah</option>
 <option>Srikandi</option>
 <option>Sumber Rejeki</option>
 <option>Waroh</option>
+
 </select>
 
 </div>
 
 <div class="input-group">
-<label>Tanggal Transaksi</label>
+<label>Tanggal Produksi</label>
 
 <input
 type="date"
-name="tanggal"
+name="tanggal_produksi"
 required>
 
 </div>
 
 </div>
 
-<div class="row">
-
-<div class="input-group">
-<label>Jenis Transaksi</label>
-
-<select name="jenis_transaksi" required>
-<option value="">Pilih Jenis Transaksi</option>
-<option>Kas Masuk</option>
-<option>Kas Keluar</option>
-</select>
-
-</div>
-
-<div class="input-group">
-<label>Jumlah</label>
-
-<input
-type="number"
-name="jumlah"
-placeholder="Masukkan Jumlah">
-
-</div>
-
-</div>
+<!-- BARIS 2 -->
 
 <div class="row">
 
 <div class="input-group">
-<label>Nominal (Rp)</label>
-
-<input
-type="number"
-name="nominal"
-placeholder="Masukkan Nominal"
-required>
-
-</div>
-
-<div class="input-group">
-<label>Keterangan</label>
+<label>Komoditas</label>
 
 <input
 type="text"
-name="keterangan"
-placeholder="Masukkan Keterangan">
+name="komoditas"
+placeholder="Masukkan Komoditas"
+required>
+
+</div>
+
+<div class="input-group">
+<label>Produk</label>
+
+<input
+type="text"
+name="produk"
+placeholder="Masukkan Nama Produk"
+required>
 
 </div>
 
 </div>
+
+<!-- BARIS 3 -->
 
 <div class="row">
 
-<div class="input-group full-width">
-
-<label>Bukti Transaksi</label>
+<div class="input-group">
+<label>Produksi Awal</label>
 
 <input
-type="file"
-name="bukti"
-accept="image/*,.pdf">
+type="number"
+name="produksi_awal"
+placeholder="Masukkan Produksi Awal">
+
+</div>
+
+<div class="input-group">
+<label>Produksi Minggu 1 (M1)</label>
+
+<input
+type="number"
+name="minggu1"
+placeholder="Masukkan Produksi Minggu 1">
+
+</div>
+
+</div>
+
+<!-- BARIS 4 -->
+
+<div class="row">
+
+<div class="input-group">
+<label>Produksi Minggu 2 (M2)</label>
+
+<input
+type="number"
+name="minggu2"
+placeholder="Masukkan Produksi Minggu 2">
+
+</div>
+
+<div class="input-group">
+<label>Produksi Minggu 3 (M3)</label>
+
+<input
+type="number"
+name="minggu3"
+placeholder="Masukkan Produksi Minggu 3">
+
+</div>
+
+</div>
+
+<!-- BARIS 5 -->
+
+<div class="row">
+
+<div class="input-group">
+<label>Produksi Minggu 4 (M4)</label>
+
+<input
+type="number"
+name="minggu4"
+placeholder="Masukkan Produksi Minggu 4">
+
+</div>
+
+<div class="input-group">
+<label>Total Produksi</label>
+
+<input
+type="number"
+name="total_produksi"
+placeholder="Total Produksi">
 
 </div>
 
