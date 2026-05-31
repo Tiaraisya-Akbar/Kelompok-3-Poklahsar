@@ -372,8 +372,8 @@ grid-template-columns:1fr;
 <div class="content">
 
 <div class="page-header">
-<h2>Tambah Tamu Kelompok</h2>
-<p>Input data kedatangantamu kelompok.</p>
+<h2>Tambah Buku Tamu Kelompok</h2>
+<p>Input data tamu yang berkunjung ke kelompok.</p>
 </div>
 
 <form id="TamuKelompokForm">
@@ -383,19 +383,30 @@ grid-template-columns:1fr;
 <div class="row">
 
 <div class="input-group">
-<label>Kelompok</label>
+<label>Nama Kelompok</label>
+
 <select name="kelompok" required>
+
 <option value="">Pilih Kelompok</option>
+
 <option>Bunga Merah</option>
 <option>Srikandi</option>
 <option>Sumber Rejeki</option>
 <option>Waroh</option>
+
 </select>
+
 </div>
 
 <div class="input-group">
-<label>Nama Lengkap</label>
-<input type="text" name="nama_lengkap" required>
+<label>Nama Tamu</label>
+
+<input
+type="text"
+name="nama"
+placeholder="Masukkan Nama Tamu"
+required>
+
 </div>
 
 </div>
@@ -405,23 +416,23 @@ grid-template-columns:1fr;
 <div class="row">
 
 <div class="input-group">
-<label>Jenis Kelamin</label>
-<select name="jenis_kelamin" required>
-<option value="">Pilih Jenis Kelamin</option>
-<option>Laki-Laki</option>
-<option>Perempuan</option>
-</select>
+<label>Tanggal Datang</label>
+
+<input
+type="date"
+name="tanggal_datang"
+required>
+
 </div>
 
 <div class="input-group">
-<label>Jabatan</label>
-<select name="jabatan" required>
-<option value="">Pilih Jabatan</option>
-<option>Ketua</option>
-<option>Sekretaris</option>
-<option>Bendahara</option>
-<option>Anggota</option>
-</select>
+<label>Nomor Telepon</label>
+
+<input
+type="tel"
+name="telepon"
+placeholder="08xxxxxxxxxx">
+
 </div>
 
 </div>
@@ -431,13 +442,22 @@ grid-template-columns:1fr;
 <div class="row">
 
 <div class="input-group">
-<label>Usia (Tahun)</label>
-<input type="number" name="usia" min="1">
+<label>Jabatan</label>
+
+<input
+type="text"
+name="jabatan"
+placeholder="Masukkan Jabatan">
+
 </div>
 
 <div class="input-group">
-<label>Nomor Telepon</label>
-<input type="tel" name="telepon">
+<label>Tanggal Pergi</label>
+
+<input
+type="date"
+name="tanggal_pergi">
+
 </div>
 
 </div>
@@ -446,29 +466,21 @@ grid-template-columns:1fr;
 
 <div class="row">
 
-<div class="input-group">
-<label>Tingkat Pendidikan</label>
-<select name="pendidikan">
-<option value="">Pilih Pendidikan</option>
-<option>SD</option>
-<option>SMP</option>
-<option>SMA/SMK</option>
-<option>D1</option>
-<option>D2</option>
-<option>D3</option>
-<option>S1</option>
-<option>S2</option>
-<option>S3</option>
-</select>
-</div>
+<div class="input-group" style="grid-column:span 2;">
 
-<div class="input-group">
-<label>Status Anggota</label>
-<select name="status_anggota">
-<option value="">Pilih Status</option>
-<option>Aktif</option>
-<option>Tidak Aktif</option>
-</select>
+<label>Tujuan Kunjungan</label>
+
+<textarea
+name="tujuan"
+rows="3"
+placeholder="Masukkan Tujuan Kunjungan"
+style="
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+resize:vertical;"></textarea>
+
 </div>
 
 </div>
@@ -477,20 +489,21 @@ grid-template-columns:1fr;
 
 <div class="row">
 
-<div class="input-group">
-<label>Usaha Utama</label>
-<input
-type="text"
-name="usaha_utama"
-placeholder="Contoh: Pengolahan Kerupuk Ikan">
-</div>
+<div class="input-group" style="grid-column:span 2;">
 
-<div class="input-group">
-<label>Usaha Sampingan</label>
-<input
-type="text"
-name="usaha_sampingan"
-placeholder="Contoh: Budidaya Ikan Lele">
+<label>Pesan dan Kesan</label>
+
+<textarea
+name="pesan"
+rows="3"
+placeholder="Masukkan Pesan dan Kesan"
+style="
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+resize:vertical;"></textarea>
+
 </div>
 
 </div>
@@ -499,17 +512,15 @@ placeholder="Contoh: Budidaya Ikan Lele">
 
 <div class="row">
 
-<div class="input-group" style="grid-column:span 2;">
-<label>Alamat Lengkap</label>
-<textarea
-name="alamat"
-rows="2"
-style="
-width:100%;
-padding:12px;
-border:1px solid #ddd;
-border-radius:8px;">
-</textarea>
+<div class="input-group full-width">
+
+<label>Foto Tamu / Dokumentasi</label>
+
+<input
+type="file"
+name="foto"
+accept="image/*">
+
 </div>
 
 </div>
@@ -518,14 +529,22 @@ border-radius:8px;">
 
 <div class="button-group">
 
-<button type="reset" class="btn btn-reset">
+<button
+type="reset"
+class="btn btn-reset">
+
 <i class="fas fa-rotate-left"></i>
- Reset
+Reset
+
 </button>
 
-<button type="submit" class="btn btn-save">
+<button
+type="submit"
+class="btn btn-save">
+
 <i class="fas fa-save"></i>
- Simpan
+Simpan
+
 </button>
 
 </div>
