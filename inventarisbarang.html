@@ -189,7 +189,6 @@ border-color:#0b5ed7;
 .button-group{
 display:flex;
 justify-content:center;
-align-items:center;
 gap:15px;
 margin-top:25px;
 }
@@ -391,28 +390,19 @@ grid-template-columns:1fr;
 
 <div class="input-group">
 <label>Nama Kelompok</label>
-
 <select name="kelompok" required>
-
 <option value="">Pilih Kelompok</option>
-
 <option>Bunga Merah</option>
 <option>Srikandi</option>
 <option>Sumber Rejeki</option>
 <option>Waroh</option>
-
 </select>
 </div>
 
 <div class="input-group">
 <label>Kode Barang</label>
-
-<input
-type="text"
-name="kode_barang"
-placeholder="Masukkan Kode Barang"
-required>
-
+<input type="text" name="kode_barang"
+placeholder="Masukkan Kode Barang" required>
 </div>
 
 </div>
@@ -421,29 +411,19 @@ required>
 
 <div class="input-group">
 <label>Nama Barang</label>
-
-<input
-type="text"
-name="nama_barang"
-placeholder="Masukkan Nama Barang"
-required>
-
+<input type="text" name="nama_barang"
+placeholder="Masukkan Nama Barang" required>
 </div>
 
 <div class="input-group">
 <label>Kondisi Barang</label>
-
 <select name="kondisi_barang" required>
-
 <option value="">Pilih Kondisi</option>
-
 <option>Baik</option>
 <option>Rusak Ringan</option>
 <option>Rusak Sedang</option>
 <option>Rusak Berat</option>
-
 </select>
-
 </div>
 
 </div>
@@ -452,23 +432,13 @@ required>
 
 <div class="input-group">
 <label>Penanggung Jawab</label>
-
-<input
-type="text"
-name="pic"
-placeholder="Masukkan Nama Penanggung Jawab"
-required>
-
+<input type="text" name="pic"
+placeholder="Masukkan Nama Penanggung Jawab" required>
 </div>
 
 <div class="input-group">
 <label>Tanggal Terima</label>
-
-<input
-type="date"
-name="tanggal_terima"
-required>
-
+<input type="date" name="tanggal_terima" required>
 </div>
 
 </div>
@@ -477,39 +447,14 @@ required>
 
 <div class="input-group">
 <label>Jumlah Barang</label>
-
-<input
-type="number"
-name="jumlah_barang"
-placeholder="Masukkan Jumlah Barang"
-required>
-
+<input type="number" name="jumlah_barang"
+placeholder="Masukkan Jumlah Barang" required>
 </div>
 
 <div class="input-group">
 <label>Keterangan</label>
-
-<input
-type="text"
-name="keterangan"
+<input type="text" name="keterangan"
 placeholder="Masukkan Keterangan Barang">
-
-</div>
-
-</div>
-
-</div>
-
-<div class="input-group">
-<label>Lokasi Penyimpanan</label>
-
-<input
-type="text"
-name="lokasi"
-placeholder="Masukkan Lokasi Penyimpanan">
-
-</div>
-
 </div>
 
 </div>
@@ -517,36 +462,33 @@ placeholder="Masukkan Lokasi Penyimpanan">
 <div class="row">
 
 <div class="input-group full-width">
+<label>Lokasi Penyimpanan</label>
+<input type="text" name="lokasi"
+placeholder="Masukkan Lokasi Penyimpanan">
+</div>
 
+</div>
+
+<div class="row">
+
+<div class="input-group full-width">
 <label>Foto Barang</label>
-
-<input
-type="file"
-name="foto_barang"
+<input type="file" name="foto_barang"
 accept="image/*">
-
 </div>
 
 </div>
 
 <div class="button-group">
 
-<button
-type="reset"
-class="btn btn-reset">
-
+<button type="reset" class="btn btn-reset">
 <i class="fas fa-rotate-left"></i>
 Reset
-
 </button>
 
-<button
-type="submit"
-class="btn btn-save">
-
+<button type="submit" class="btn btn-save">
 <i class="fas fa-save"></i>
 Simpan
-
 </button>
 
 </div>
