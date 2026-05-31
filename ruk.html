@@ -373,7 +373,7 @@ grid-template-columns:1fr;
 
 <div class="page-header">
 <h2>Tambah Buku Rencana Usaha Kelompok</h2>
-<p>Input Rencana Usaha Kelompok.</p>
+<p>Input Perencanaan kebutuhan usaha pengolahan dan pemasaran hasil perikanan.</p>
 </div>
 
 <form id="RUKForm">
@@ -399,11 +399,12 @@ grid-template-columns:1fr;
 </div>
 
 <div class="input-group">
-<label>Tanggal Rapat</label>
+<label>Nama Produk</label>
 
 <input
-type="date"
-name="tanggal_rapat"
+type="text"
+name="produk"
+placeholder="Contoh: Kerupuk Ikan"
 required>
 
 </div>
@@ -415,24 +416,22 @@ required>
 <div class="row">
 
 <div class="input-group">
-<label>Agenda Rapat</label>
+<label>Bahan Baku Utama</label>
 
 <input
 type="text"
-name="agenda"
-placeholder="Masukkan Agenda Rapat"
-required>
+name="bahan_baku"
+placeholder="Contoh: Ikan Gabus">
 
 </div>
 
 <div class="input-group">
-<label>Pemimpin Rapat</label>
+<label>Kebutuhan Bahan Baku (Kg)</label>
 
 <input
-type="text"
-name="pemimpin_rapat"
-placeholder="Masukkan Nama Pemimpin Rapat"
-required>
+type="number"
+name="volume_bahan_baku"
+placeholder="Masukkan Kebutuhan Bahan Baku">
 
 </div>
 
@@ -443,28 +442,22 @@ required>
 <div class="row">
 
 <div class="input-group">
-<label>Jabatan</label>
+<label>Nilai Bahan Baku (Rp)</label>
 
-<select name="jabatan">
-
-<option value="">Pilih Jabatan</option>
-
-<option>Ketua</option>
-<option>Sekretaris</option>
-<option>Bendahara</option>
-<option>Anggota</option>
-
-</select>
+<input
+type="number"
+name="nilai_bahan_baku"
+placeholder="Masukkan Nilai Bahan Baku">
 
 </div>
 
 <div class="input-group">
-<label>Jumlah Peserta</label>
+<label>Kebutuhan Kemasan</label>
 
 <input
 type="number"
-name="jumlah_peserta"
-placeholder="Masukkan Jumlah Peserta">
+name="kemasan"
+placeholder="Masukkan Jumlah Kemasan">
 
 </div>
 
@@ -474,20 +467,23 @@ placeholder="Masukkan Jumlah Peserta">
 
 <div class="row">
 
-<div class="input-group full-width">
+<div class="input-group">
+<label>Nilai Kemasan (Rp)</label>
 
-<label>Isi Pembahasan</label>
+<input
+type="number"
+name="nilai_kemasan"
+placeholder="Masukkan Nilai Kemasan">
 
-<textarea
-name="isi_pembahasan"
-rows="5"
-placeholder="Tuliskan hasil pembahasan rapat"
-style="
-width:100%;
-padding:12px;
-border:1px solid #ddd;
-border-radius:8px;
-resize:vertical;"></textarea>
+</div>
+
+<div class="input-group">
+<label>Peralatan yang Dibutuhkan</label>
+
+<input
+type="text"
+name="peralatan"
+placeholder="Contoh: Vacuum Sealer">
 
 </div>
 
@@ -497,20 +493,23 @@ resize:vertical;"></textarea>
 
 <div class="row">
 
-<div class="input-group full-width">
+<div class="input-group">
+<label>Nilai Peralatan (Rp)</label>
 
-<label>Keputusan / Kesimpulan</label>
+<input
+type="number"
+name="nilai_peralatan"
+placeholder="Masukkan Nilai Peralatan">
 
-<textarea
-name="kesimpulan"
-rows="4"
-placeholder="Tuliskan keputusan dan kesimpulan rapat"
-style="
-width:100%;
-padding:12px;
-border:1px solid #ddd;
-border-radius:8px;
-resize:vertical;"></textarea>
+</div>
+
+<div class="input-group">
+<label>Target Produksi per Bulan</label>
+
+<input
+type="number"
+name="target_produksi"
+placeholder="Masukkan Target Produksi">
 
 </div>
 
@@ -520,20 +519,23 @@ resize:vertical;"></textarea>
 
 <div class="row">
 
-<div class="input-group full-width">
+<div class="input-group">
+<label>Target Penjualan per Bulan (Rp)</label>
 
-<label>Tindak Lanjut</label>
+<input
+type="number"
+name="target_penjualan"
+placeholder="Masukkan Target Penjualan">
 
-<textarea
-name="tindak_lanjut"
-rows="3"
-placeholder="Tuliskan tindak lanjut hasil rapat"
-style="
-width:100%;
-padding:12px;
-border:1px solid #ddd;
-border-radius:8px;
-resize:vertical;"></textarea>
+</div>
+
+<div class="input-group">
+<label>Kebutuhan Modal Usaha (Rp)</label>
+
+<input
+type="number"
+name="modal"
+placeholder="Masukkan Kebutuhan Modal">
 
 </div>
 
@@ -545,12 +547,41 @@ resize:vertical;"></textarea>
 
 <div class="input-group full-width">
 
-<label>Dokumentasi Rapat</label>
+<label>Rencana Pengembangan Usaha</label>
 
-<input
-type="file"
-name="foto_rapat"
-accept="image/*">
+<textarea
+name="rencana"
+rows="4"
+placeholder="Tuliskan rencana pengembangan usaha"
+style="
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+resize:vertical;"></textarea>
+
+</div>
+
+</div>
+
+<!-- BARIS 8 -->
+
+<div class="row">
+
+<div class="input-group full-width">
+
+<label>Keterangan</label>
+
+<textarea
+name="keterangan"
+rows="3"
+placeholder="Masukkan keterangan tambahan"
+style="
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+resize:vertical;"></textarea>
 
 </div>
 
