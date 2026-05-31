@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sistem Informasi POKLAHSAR</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
@@ -22,7 +24,9 @@ background:#eef3fa;
 display:flex;
 }
 
-/* SIDEBAR */
+/* ======================
+SIDEBAR
+====================== */
 
 .sidebar{
 width:280px;
@@ -46,7 +50,8 @@ margin-bottom:5px;
 
 .logo p{
 font-size:13px;
-opacity:.8;
+opacity:.85;
+line-height:1.5;
 }
 
 .menu{
@@ -74,9 +79,8 @@ transition:.3s;
 background:rgba(255,255,255,.15);
 }
 
-/* SUBMENU BUKU */
+/* SUB MENU */
 
-```css
 .submenu{
 display:none;
 margin-left:15px;
@@ -98,16 +102,19 @@ border-radius:6px;
 .submenu a:hover{
 background:rgba(255,255,255,.18);
 }
-```
 
-/* MAIN */
+/* ======================
+MAIN
+====================== */
 
 .main{
 margin-left:280px;
 width:calc(100% - 280px);
 }
 
-/* TOPBAR */
+/* ======================
+TOPBAR
+====================== */
 
 .topbar{
 background:white;
@@ -122,81 +129,49 @@ box-shadow:0 2px 10px rgba(0,0,0,.08);
 color:#0b5ed7;
 }
 
-/* CONTENT */
-
 .content{
 padding:25px;
 }
 
-/* HERO */
+/* ======================
+HERO
+====================== */
 
 .hero{
-    background:#fff;
-    padding:15px;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-    margin-bottom:20px;
+background:#fff;
+padding:15px;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+margin-bottom:20px;
 }
 
 .hero img{
-    width:100%;
-    height:390px;
-    object-fit:cover;
-    object-position:center top;
-    display:block;
-    border-radius:15px;
-    margin-bottom:15px;
+width:100%;
+height:390px;
+object-fit:cover;
+object-position:center top;
+display:block;
+border-radius:15px;
+margin-bottom:15px;
 }
 
 .hero-content{
-    padding:0 10px 10px;
+padding:0 10px 10px;
 }
 
 .hero-content h2{
-    color:#1565d8;
-    font-size:24px;
-    font-weight:700;
-    margin-bottom:10px;
-}
-
-.hero-content p{
-    font-size:16px;
-    line-height:1.8;
-    color:#555;
-    text-align:justify;
-    margin-bottom:10px;
-}
-
-/* CARD */
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-margin-top:25px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card i{
-font-size:35px;
-color:#0b5ed7;
+color:#1565d8;
+font-size:24px;
+font-weight:700;
 margin-bottom:10px;
 }
 
-.card h3{
+.hero-content p{
+font-size:16px;
+line-height:1.8;
+color:#555;
+text-align:justify;
 margin-bottom:10px;
 }
 
@@ -205,6 +180,8 @@ padding:20px;
 text-align:center;
 color:#666;
 }
+
+/* RESPONSIVE */
 
 @media(max-width:768px){
 
@@ -226,144 +203,163 @@ width:100%;
 }
 
 </style>
+
 </head>
 
 <body>
-    
-```html
+
 <!-- SIDEBAR -->
 
 <div class="sidebar">
 
-    <div class="logo">
+<div class="logo">
 
-        <h2>POKLAHSAR</h2>
+<h2>POKLAHSAR</h2>
 
-        <p>Kelompok Pengolah dan Pemasar Hasil Perikanan</p>
-
-    </div>
-
-    <div class="menu">
-
-        <ul>
-
-            <!-- MENU -->
-
-            <li>
-                <a href="index.html">
-                    <i class="fas fa-home"></i>
-                    Menu
-                </a>
-            </li>
-
-            <!-- INDIVIDU -->
-
-            <li>
-
-                <a href="#"
-                   onclick="toggleMenu('individuMenu',this);return false;">
-
-                    <i class="fas fa-user"></i>
-                    Individu
-
-                    <span style="float:right;">
-                        <i class="fas fa-chevron-down"></i>
-                    </span>
-
-                </a>
-
-                <ul id="individuMenu" class="submenu">
-
-                    <li><a href="kelompok.html">Kelompok</a></li>
-
-                    <li><a href="buku.html">Buku</a></li>
-
-                    <li><a href="anggota.html">Data Anggota</a></li>
-
-                    <li><a href="tamukelompok.html">Tamu Kelompok</a></li>
-
-                    <li><a href="kaskelompok.html">Kas Kelompok</a></li>
-
-                    <li><a href="produksikelompok.html">Produksi Kelompok</a></li>
-
-                    <li><a href="notulenrapat.html">Notulen Rapat</a></li>
-
-                    <li><a href="ruk.html">RUK</a></li>
-
-                    <li><a href="rub.html">RUB</a></li>
-
-                    <li><a href="agenda.html">Agenda</a></li>
-
-                    <li><a href="rencanakegiatan.html">Rencana Kegiatan</a></li>
-
-                    <li><a href="polaproduksi.html">Pola Produksi</a></li>
-
-                    <li><a href="inventarisbarang.html">Inventaris Barang</a></li>
-
-                    <li><a href="pertemuankelompok.html">Pertemuan Kelompok</a></li>
-
-                    <li><a href="iurankelompok.html">Iuran Kelompok</a></li>
-
-                    <li><a href="pinjamananggota.html">Pinjaman Anggota</a></li>
-
-                    <li><a href="kodifikasikelompok.html">Kodifikasi Kelompok</a></li>
-
-                </ul>
-
-            </li>
-
-            <!-- KELOMPOK -->
-
-            <li>
-
-                <a href="#"
-                   onclick="toggleMenu('kelompokMenu',this);return false;">
-
-                    <i class="fas fa-users"></i>
-                    Kelompok
-
-                    <span style="float:right;">
-                        <i class="fas fa-chevron-down"></i>
-                    </span>
-
-                </a>
-
-                <ul id="kelompokMenu" class="submenu">
-
-                    <li>
-                        <a href="sejarahkelompok.html">
-                            Sejarah Kelompok
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="kelompok.html">
-                            Data Dasar Kelompok
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="anggota.html">
-                            Data Anggota Kelompok
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="datakomoditasperikanan.html">
-                            Data Komoditas Perikanan
-                        </a>
-                    </li>
-
-                </ul>
-
-            </li>
-
-        </ul>
-
-    </div>
+<p>
+Kelompok Pengolah dan Pemasar Hasil Perikanan
+</p>
 
 </div>
-```
+
+<div class="menu">
+
+<ul>
+
+<li>
+
+<a href="index.html">
+
+<i class="fas fa-home"></i>
+ Menu
+
+</a>
+
+</li>
+
+<!-- INDIVIDU -->
+
+<li>
+
+<a href="#"
+onclick="toggleMenu('individuMenu',this);return false;">
+
+<i class="fas fa-user"></i>
+ Individu
+
+<span style="float:right;">
+<i class="fas fa-chevron-down"></i>
+</span>
+
+</a>
+
+<ul id="individuMenu" class="submenu">
+
+<li><a href="kelompok.html">Kelompok</a></li>
+
+<li><a href="buku.html">Buku</a></li>
+
+<li><a href="anggota.html">Data Anggota</a></li>
+
+<li><a href="tamukelompok.html">Tamu Kelompok</a></li>
+
+<li><a href="kaskelompok.html">Kas Kelompok</a></li>
+
+<li><a href="produksikelompok.html">Produksi Kelompok</a></li>
+
+<li><a href="notulenrapat.html">Notulen Rapat</a></li>
+
+<li><a href="ruk.html">RUK</a></li>
+
+<li><a href="rub.html">RUB</a></li>
+
+<li><a href="agenda.html">Agenda</a></li>
+
+<li><a href="rencanakegiatan.html">
+Rencana Kegiatan
+</a></li>
+
+<li><a href="polaproduksi.html">
+Pola Produksi
+</a></li>
+
+<li><a href="inventarisbarang.html">
+Inventaris Barang
+</a></li>
+
+<li><a href="pertemuankelompok.html">
+Pertemuan Kelompok
+</a></li>
+
+<li><a href="iurankelompok.html">
+Iuran Kelompok
+</a></li>
+
+<li><a href="pinjamananggota.html">
+Pinjaman Anggota
+</a></li>
+
+<li><a href="kodifikasikelompok.html">
+Kodifikasi Kelompok
+</a></li>
+
+</ul>
+
+</li>
+
+<!-- KELOMPOK -->
+
+<li>
+
+<a href="#"
+onclick="toggleMenu('kelompokMenu',this);return false;">
+
+<i class="fas fa-users"></i>
+ Kelompok
+
+<span style="float:right;">
+<i class="fas fa-chevron-down"></i>
+</span>
+
+</a>
+
+<ul id="kelompokMenu" class="submenu">
+
+<li>
+<a href="sejarahkelompok.html">
+Sejarah Kelompok
+</a>
+</li>
+
+<li>
+<a href="kelompok.html">
+Data Dasar Kelompok
+</a>
+</li>
+
+<li>
+<a href="anggota.html">
+Data Anggota Kelompok
+</a>
+</li>
+
+<li>
+<a href="datakomoditasperikanan.html">
+Data Komoditas Perikanan
+</a>
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<!-- MAIN -->
 
 <div class="main">
 
@@ -372,52 +368,90 @@ width:100%;
 <h2>Sistem Informasi POKLAHSAR</h2>
 
 <div>
+
 <i class="fas fa-user-circle"></i>
- Sosial Ekonomi Perikanan
+
+Sosial Ekonomi Perikanan
+
 </div>
 
 </div>
 
 <div class="content">
 
+<!-- HERO -->
+
 <div class="hero">
 
-<img src="fpik.jpg" alt="Fakultas Perikanan dan Ilmu Kelautan">
+<img src="fpik.jpg"
+alt="POKLAHSAR">
 
 <div class="hero-content">
 
-<h2>Selamat Datang di Sistem Informasi POKLAHSAR</h2>
+<h2>
+Selamat Datang di Sistem Informasi POKLAHSAR
+</h2>
 
 <p>
-POKLAHSAR (Kelompok Pengolah dan Pemasar Hasil Perikanan) merupakan kelompok masyarakat yang bergerak dalam kegiatan pengolahan dan pemasaran hasil perikanan untuk meningkatkan nilai tambah produk, memperluas pasar, dan meningkatkan kesejahteraan anggota kelompok.
+POKLAHSAR (Kelompok Pengolah dan Pemasar Hasil Perikanan)
+merupakan kelompok masyarakat yang bergerak dalam kegiatan
+pengolahan dan pemasaran hasil perikanan untuk meningkatkan
+nilai tambah produk, memperluas pasar, dan meningkatkan
+kesejahteraan anggota kelompok.
 </p>
 
 <p>
-Aplikasi ini digunakan untuk membantu pengelolaan administrasi kelompok, data anggota, keuangan, produksi, inventaris, pertemuan, pemasaran, serta penyusunan dokumen usaha secara digital sehingga lebih efektif, efisien, dan transparan.
+Aplikasi ini digunakan untuk membantu pengelolaan
+administrasi kelompok, data anggota, keuangan, produksi,
+inventaris, pertemuan, pemasaran, serta penyusunan dokumen
+usaha secara digital sehingga lebih efektif, efisien,
+dan transparan.
 </p>
 
 </div>
 
 </div>
+
+<!-- FOOTER -->
 
 <div class="footer">
-© 2026 Sistem Informasi POKLAHSAR | Fakultas Perikanan dan Ilmu Kelautan
+
+© 2026 Sistem Informasi POKLAHSAR |
+Fakultas Perikanan dan Ilmu Kelautan
+
 </div>
 
 </div>
+<!-- END CONTENT -->
+
+</div>
+<!-- END MAIN -->
 
 <script>
 
-function toggleBuku(){
+function toggleMenu(menuId, element){
 
-var submenu =
-document.getElementById("submenuBuku");
+    const menu =
+    document.getElementById(menuId);
 
-if(submenu.style.display === "block"){
-submenu.style.display = "none";
-}else{
-submenu.style.display = "block";
-}
+    const icon =
+    element.querySelector("i.fa-chevron-down, i.fa-chevron-up");
+
+    if(menu.style.display === "block"){
+
+        menu.style.display = "none";
+
+        icon.classList.remove("fa-chevron-up");
+        icon.classList.add("fa-chevron-down");
+
+    }else{
+
+        menu.style.display = "block";
+
+        icon.classList.remove("fa-chevron-down");
+        icon.classList.add("fa-chevron-up");
+
+    }
 
 }
 
