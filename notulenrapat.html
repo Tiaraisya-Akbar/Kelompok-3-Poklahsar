@@ -399,11 +399,11 @@ grid-template-columns:1fr;
 </div>
 
 <div class="input-group">
-<label>Tanggal Produksi</label>
+<label>Tanggal Rapat</label>
 
 <input
 type="date"
-name="tanggal_produksi"
+name="tanggal_rapat"
 required>
 
 </div>
@@ -415,23 +415,23 @@ required>
 <div class="row">
 
 <div class="input-group">
-<label>Komoditas</label>
+<label>Agenda Rapat</label>
 
 <input
 type="text"
-name="komoditas"
-placeholder="Masukkan Komoditas"
+name="agenda"
+placeholder="Masukkan Agenda Rapat"
 required>
 
 </div>
 
 <div class="input-group">
-<label>Produk</label>
+<label>Pemimpin Rapat</label>
 
 <input
 type="text"
-name="produk"
-placeholder="Masukkan Nama Produk"
+name="pemimpin_rapat"
+placeholder="Masukkan Nama Pemimpin Rapat"
 required>
 
 </div>
@@ -443,22 +443,28 @@ required>
 <div class="row">
 
 <div class="input-group">
-<label>Produksi Awal</label>
+<label>Jabatan</label>
 
-<input
-type="number"
-name="produksi_awal"
-placeholder="Masukkan Produksi Awal">
+<select name="jabatan">
+
+<option value="">Pilih Jabatan</option>
+
+<option>Ketua</option>
+<option>Sekretaris</option>
+<option>Bendahara</option>
+<option>Anggota</option>
+
+</select>
 
 </div>
 
 <div class="input-group">
-<label>Produksi Minggu 1 (M1)</label>
+<label>Jumlah Peserta</label>
 
 <input
 type="number"
-name="minggu1"
-placeholder="Masukkan Produksi Minggu 1">
+name="jumlah_peserta"
+placeholder="Masukkan Jumlah Peserta">
 
 </div>
 
@@ -468,23 +474,20 @@ placeholder="Masukkan Produksi Minggu 1">
 
 <div class="row">
 
-<div class="input-group">
-<label>Produksi Minggu 2 (M2)</label>
+<div class="input-group full-width">
 
-<input
-type="number"
-name="minggu2"
-placeholder="Masukkan Produksi Minggu 2">
+<label>Isi Pembahasan</label>
 
-</div>
-
-<div class="input-group">
-<label>Produksi Minggu 3 (M3)</label>
-
-<input
-type="number"
-name="minggu3"
-placeholder="Masukkan Produksi Minggu 3">
+<textarea
+name="isi_pembahasan"
+rows="5"
+placeholder="Tuliskan hasil pembahasan rapat"
+style="
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+resize:vertical;"></textarea>
 
 </div>
 
@@ -494,23 +497,60 @@ placeholder="Masukkan Produksi Minggu 3">
 
 <div class="row">
 
-<div class="input-group">
-<label>Produksi Minggu 4 (M4)</label>
+<div class="input-group full-width">
 
-<input
-type="number"
-name="minggu4"
-placeholder="Masukkan Produksi Minggu 4">
+<label>Keputusan / Kesimpulan</label>
+
+<textarea
+name="kesimpulan"
+rows="4"
+placeholder="Tuliskan keputusan dan kesimpulan rapat"
+style="
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+resize:vertical;"></textarea>
 
 </div>
 
-<div class="input-group">
-<label>Total Produksi</label>
+</div>
+
+<!-- BARIS 6 -->
+
+<div class="row">
+
+<div class="input-group full-width">
+
+<label>Tindak Lanjut</label>
+
+<textarea
+name="tindak_lanjut"
+rows="3"
+placeholder="Tuliskan tindak lanjut hasil rapat"
+style="
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+resize:vertical;"></textarea>
+
+</div>
+
+</div>
+
+<!-- BARIS 7 -->
+
+<div class="row">
+
+<div class="input-group full-width">
+
+<label>Dokumentasi Rapat</label>
 
 <input
-type="number"
-name="total_produksi"
-placeholder="Total Produksi">
+type="file"
+name="foto_rapat"
+accept="image/*">
 
 </div>
 
