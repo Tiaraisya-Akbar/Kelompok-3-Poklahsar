@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rencana Kegiatan Usaha | POKLAHSAR</title>
+<title>Rencana Kegiatan | POKLAHSAR</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
 *{
@@ -307,7 +307,7 @@ body{
         Input Rencana Kegiatan Usaha
       </h3>
 
-      <form id="rencanaForm">
+      <form id="RencanaKegiatanForm">
         <div class="row">
           <div class="input-group">
             <label>Nama Kelompok</label>
@@ -380,7 +380,7 @@ function toggleBuku(){
   }
 }
 
-const form = document.getElementById("rencanakegiatanForm");
+const form = document.getElementById("RencanaKegiatanForm");
 form.addEventListener("submit", function(e){
   e.preventDefault();
   fetch("https://script.google.com/macros/s/AKfycbzH9n8y5K6i6dWFuSokqadO7saielToJPaDwEQ-isDx4mcvlptSEH0ieMsJou1MD1gJLQ/exec", {
