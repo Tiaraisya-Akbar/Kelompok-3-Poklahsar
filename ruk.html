@@ -3,119 +3,295 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Form Rencana Usaha Kelompok & Tingkat Kepuasan</title>
+
+<title>Rencana Usaha Kelompok (RUK)</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
-    background:linear-gradient(135deg,#ffd6e7,#ffeaf3);
-    min-height:100vh;
+background:#f4f7fc;
+display:flex;
 }
 
-header{
-    background:#ff6fa5;
-    color:white;
-    text-align:center;
-    padding:20px;
-    font-size:24px;
-    font-weight:bold;
-    box-shadow:0 2px 10px rgba(0,0,0,0.15);
+.sidebar{
+width:280px;
+height:100vh;
+background:#2952cc;
+position:fixed;
+overflow-y:auto;
+color:white;
+}
+
+.logo{
+padding:25px;
+text-align:center;
+border-bottom:1px solid rgba(255,255,255,.2);
 }
 
 .menu{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    margin:20px;
-    flex-wrap:wrap;
+padding:15px;
 }
 
-.menu button{
-    padding:12px 24px;
-    border:none;
-    border-radius:30px;
-    background:#ff8fbc;
-    color:white;
-    cursor:pointer;
-    font-size:16px;
-    transition:0.3s;
+.menu ul{
+list-style:none;
 }
 
-.menu button:hover{
-    background:#ff5f9d;
+.menu ul li{
+margin-bottom:8px;
 }
 
-.form-container{
-    width:95%;
-    max-width:1200px;
-    margin:auto;
-    background:white;
-    padding:15px;
-    border-radius:20px;
-    box-shadow:0 4px 20px rgba(0,0,0,0.1);
+.menu ul li a{
+display:block;
+padding:12px 15px;
+text-decoration:none;
+color:white;
+border-radius:10px;
+transition:.3s;
 }
 
-iframe{
-    width:100%;
-    height:850px;
-    border:none;
-    border-radius:15px;
+.menu ul li a:hover{
+background:rgba(255,255,255,.15);
 }
 
-.hidden{
-    display:none;
+.main{
+margin-left:280px;
+width:calc(100% - 280px);
 }
 
-footer{
-    text-align:center;
-    padding:20px;
-    color:#666;
+.topbar{
+background:white;
+padding:18px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
+
+.topbar h2{
+color:#2952cc;
+}
+
+.content{
+padding:25px;
+}
+
+.hero{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+margin-bottom:25px;
+}
+
+.hero h2{
+color:#2952cc;
+margin-bottom:15px;
+}
+
+.hero p{
+line-height:1.8;
+color:#555;
+text-align:justify;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card i{
+font-size:35px;
+color:#2952cc;
+margin-bottom:15px;
+}
+
+.card h3{
+margin-bottom:10px;
+color:#2952cc;
+}
+
+.card p{
+color:#555;
+line-height:1.6;
+margin-bottom:15px;
+}
+
+.btn{
+display:inline-block;
+padding:10px 15px;
+background:#2952cc;
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
+
+.btn:hover{
+background:#1e3fa5;
+}
+
+.footer{
+text-align:center;
+padding:20px;
+margin-top:25px;
+color:#666;
+}
+
+@media(max-width:768px){
+
+.sidebar{
+width:100%;
+height:auto;
+position:relative;
+}
+
+.main{
+margin-left:0;
+width:100%;
+}
+
+body{
+flex-direction:column;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-🌸 Form Rencana Usaha Kelompok POKLAHSAR 🌸
-</header>
+<div class="sidebar">
+
+<div class="logo">
+<h2>POKLAHSAR</h2>
+<p>Sistem Informasi Kelompok Pengolah dan Pemasar Hasil Perikanan</p>
+</div>
 
 <div class="menu">
-    <button onclick="showForm('usaha')">📋 Rencana Usaha Kelompok</button>
-    <button onclick="showForm('kepuasan')">⭐ Tingkat Kepuasan</button>
-</div>
 
-<div class="form-container">
+<ul>
 
-    <div id="usaha">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdidF3o0GHK0gUJOhSe6kftFzwJkKnZC9IIAW7xwCic7B52ug/viewform?embedded=true">
-        </iframe>
-    </div>
+<li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
 
-    <div id="kepuasan" class="hidden">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScdL-PtVAFB8rzr-pIwRlysh8Oi125YoQ5FxihYse7NunMYaw/viewform?embedded=true">
-        </iframe>
-    </div>
+<li><a href="#"><i class="fas fa-users"></i> Kelompok</a></li>
+
+<li><a href="#"><i class="fas fa-book"></i> Rencana Usaha Kelompok</a></li>
+
+</ul>
 
 </div>
 
-<footer>
-💖 Sistem Rencana Usaha Kelompok & Evaluasi Kepuasan Pengguna
-</footer>
+</div>
 
-<script>
-function showForm(formId){
-    document.getElementById("usaha").classList.add("hidden");
-    document.getElementById("kepuasan").classList.add("hidden");
-    document.getElementById(formId).classList.remove("hidden");
-}
-</script>
+<div class="main">
+
+<div class="topbar">
+
+<h2>Rencana Usaha Kelompok (RUK)</h2>
+
+<div>
+<i class="fas fa-user-circle"></i>
+Administrator
+</div>
+
+</div>
+
+<div class="content">
+
+<div class="hero">
+
+<h2>Sistem Informasi Rencana Usaha Kelompok (RUK)</h2>
+
+<p>
+Halaman ini digunakan untuk mengakses Form Rencana Usaha Kelompok,
+Spreadsheet hasil pengisian, Form Tingkat Kepuasan, Dashboard Looker Studio,
+serta hasil analisis data yang digunakan dalam pengelolaan kelompok.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<i class="fas fa-file-alt"></i>
+<h3>Form RUK</h3>
+<p>Pengisian data Rencana Usaha Kelompok.</p>
+<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScdL-PtVAFB8rzr-pIwRlysh8Oi125YoQ5FxihYse7NunMYaw/viewform?embedded=true" target="_blank">Buka</a>
+</div>
+
+<div class="card">
+<i class="fas fa-table"></i>
+<h3>Spreadsheet RUK</h3>
+<p>Hasil pengisian Form RUK.</p>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/1odCmwZwFsJ3IGHZPfUqxQPN1ZAA58zffD0caewNilW0/edit?usp=sharing" target="_blank">Buka</a>
+</div>
+
+<div class="card">
+<i class="fas fa-face-smile"></i>
+<h3>Form Kepuasan</h3>
+<p>Kuesioner tingkat kepuasan pengguna.</p>
+<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdidF3o0GHK0gUJOhSe6kftFzwJkKnZC9IIAW7xwCic7B52ug/viewform?embedded=true" target="_blank">Buka</a>
+</div>
+
+<div class="card">
+<i class="fas fa-chart-bar"></i>
+<h3>Spreadsheet Kepuasan</h3>
+<p>Data hasil tingkat kepuasan.</p>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/10T7gRd9Z2-cGP8rQ97-oAcLepfDXQcQkqqQoUtMT-UI/edit?usp=sharing" target="_blank">Buka</a>
+</div>
+
+<div class="card">
+<i class="fas fa-chart-line"></i>
+<h3>Looker Studio RUK</h3>
+<p>Dashboard visualisasi RUK.</p>
+<a class="btn" href="https://datastudio.google.com/reporting/0a93bc12-1dc2-4b54-9d41-26d325bf2d56" target="_blank">Buka</a>
+</div>
+
+<div class="card">
+<i class="fas fa-chart-pie"></i>
+<h3>Looker Studio Kepuasan</h3>
+<p>Dashboard visualisasi kepuasan.</p>
+<a class="btn" href="https://datastudio.google.com/reporting/e81388cb-1a77-424b-b00b-fb8b9524a29b" target="_blank">Buka</a>
+</div>
+
+<div class="card">
+<i class="fas fa-file-excel"></i>
+<h3>Analisis Data Excel</h3>
+<p>File analisis data hasil pengolahan.</p>
+<a class="btn" href="https://1drv.ms/x/c/0299b29105d939b3/IQBbIn41yrv-Sq4Z7Pd97utsAS6uhX_cKB0xwr-as4wAycg?e=ITsfTS" target="_blank">Download</a>
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 Sistem Informasi POKLAHSAR | Fakultas Perikanan dan Ilmu Kelautan
+</div>
+
+</div>
+
+</div>
 
 </body>
 </html>
